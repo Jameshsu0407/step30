@@ -1,0 +1,74 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 故事緣起
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/story.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 故事緣起
+		section
+			.container.my-5(style="overflow-x: hidden; clear:both;")
+				h2.text-warning.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 關於舊鞋。救命 / Step30.org
+				h6(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 組織使命：傳揚基督的福音，關懷世界的困苦。
+				h6(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000") 成立宗旨：以基督信仰精神及人道援助行動為基礎，關懷世界弱勢族群的身心靈並協助建立永續自立的方針。
+				br
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1500") 協會緣起於深耕非洲十餘年的加拿大牧師Allen Remley，以及青年宣教士楊右任夫婦，和許多關懷非洲工作的朋友們共同發起的活動。在這當中有老師、學生，有牧者，也有專案管理者，更有來自各領域的專業工作者無私奉獻，與我們共同跨出舒適圈走進世界與非洲送出關懷。
+		// bg_parallax
+		section
+			.bg_parallax.story
+				.content
+					.container
+						.row
+							.col-12.col-md-8.my-5(style="overflow-x: hidden; clear:both;")
+								h2.text-warning.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 年輕人翻轉世界的腳印Step30.org
+								p.text-white(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 非洲撒哈拉沙漠以南，許多孩子生命無法超過五歲 ，超過百萬名學童沒鞋可穿，每天上學的路途平均 60~90 分鐘。＂沙蚤＂是沒有鞋子的孩子都有的疾病，也讓許多孩子因此致命。小小的沙蚤，侵蝕著雙腳，也隔絕了夢想。
+								p.text-white(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 「舊鞋。救命」號召願意為世界改變付出的年輕人，以實際行動透過關懷與同理，除了物資的捐助外也將裝載物資的貨櫃變成教室、診所，教會與社區關懷點。並在當地教導女孩們製作重複使用的布衛生棉，鑿井供應乾淨水源，教導畜牧及有機農業幫助偏鄉自立。與許多國際組織合作，一起走進非洲被遺忘的角落、關懷赤貧地區的孩子與朋友、不論膚色、信仰。我們服侍最小的弟兄，實踐上帝愛人如己的使命 。
+							.col-12.col-md-4.my-5.d-flex.justify-content-center.align-items-center(style="overflow-x: hidden; clear:both;")
+								img.img-fluid(src="../assets/img/story01.jpg", alt="" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true")
+
+				.parallax(style="background-image: url(../assets/img/story01_bg.jpg); background-size: cover;")
+		section
+			.container.my-5
+				.row
+					.col-12.col-md-4.order-2.order-md-1.d-flex.justify-content-center.align-items-center(style="overflow-x: hidden; clear:both;")
+						img.img-fluid(src="../assets/img/story02.jpg", alt="" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true")
+					.col-12.col-md-8.order-1.order-md-2(style="overflow-x: hidden; clear:both;")
+						h2.text-warning.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 國際的視野與合作
+						p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 「舊鞋。救命」目前的工作在東非的肯亞、烏干達、坦桑尼亞，蒲隆地和盧安達持續進行。並持續關懷鄰近的尚比亞，剛果，南蘇丹，史瓦蒂尼赤貧偏鄉地區。我們攜手世界諸多青年走進非洲，親身參與思考貧窮議題，捲起袖子與非洲當地三百多個家庭教會和來自美國，加拿大、烏克蘭、澳洲，瑞士，南非、英國等國際組織以及當地的非營利組織合作。以專案管理與青年培力方式推動著每個計劃執行，深入赤貧偏鄉部落，社區，學校。並訓練追踪每個執行的方向，提升各個專案投入的成功率， 藉由計畫推動，與非洲當地的地區領袖對話，當地人成為工作夥伴，用行動一起為改變世界的夢想盡一份心力。
+		// bg_parallax
+		section
+			.bg_parallax.story
+				.content
+					.container
+						.row
+							.col-12.col-md-8.my-5(style="overflow-x: hidden; clear:both;")
+								h2.text-warning.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 左手援助、右手輔導協助自立
+								p.text-white(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 在這個過程中，「舊鞋。救命」認為赤貧的扶助不能只單依靠援助，應透過教育與培育正確知識、發展社會企業協助貧困自立。關懷生活基本需要，提供乾淨的飲水，每一個任務都是一個挑戰。我們需要每一雙舊鞋，每一分錢，以及每一位支持的夥伴。這裡不僅是舊鞋，是對貧苦的關懷，是協助每個孩子改變明天的希望。我們盼望在彼此的所能中，讓每一個孩子都能透過教育，為自己的明天掙脫目前的束縛，對自己的未來努力不懈。
+							.col-12.col-md-4.my-5.d-flex.justify-content-center.align-items-center(style="overflow-x: hidden; clear:both;")
+								img.img-fluid(src="../assets/img/story03.jpg", alt="" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true")
+				.parallax(style="background-image: url(../assets/img/story03_bg.jpg); background-size: cover;")
+		section
+			.container.text-center.my-5(style="overflow-x: hidden; clear:both;")
+				h2.text-warning.mb-4(data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true") 傳揚基督的福音．關懷世界的貧苦
+				p(data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true") 「舊鞋。救命」組成多數為青年成員，不僅是捐舊鞋，我們走入東非每個被遺忘的角落，不論是山窮水盡的北肯亞沙漠地帶，南蘇丹戰亂逃離到北烏干達的難民營，或是肯亞、烏干達的赤貧偏鄉。依據著2030聯合國SDGS永續發展方向前進，在赤貧偏鄉挖水井、建學校、診所、成立布衛生棉工作坊、輔導養雞、種植高經濟價值蔬菜等……更遵循著聖經的教導，照顧患難中的孤兒寡婦，與一群年輕人捲起袖子、拯救生命，為著偏鄉的改變努力。
+		
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

@@ -1,0 +1,149 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 國內志工
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/domestic_volunteer.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 國內志工
+		section
+			.container.my-5
+				.running_project.domestic_volunteer
+					.left
+						form
+							.write_info
+								// 國內志工種類
+								.form-group
+									label.required.d-block 國內志工種類
+									.form-check.form-check-inline
+										input#domestic_volunteer1.form-check-input(type="radio" name="國內志工種類" value="domestic_volunteer1")
+										label.form-check-label(for="domestic_volunteer1") 物資整理
+									.form-check.form-check-inline
+										input#domestic_volunteer2.form-check-input(type="radio" name="國內志工種類" value="domestic_volunteer2")
+										label.form-check-label(for="domestic_volunteer2") 線上客服
+									.form-check.form-check-inline
+										input#domestic_volunteer3.form-check-input(type="radio" name="國內志工種類" value="domestic_volunteer3")
+										label.form-check-label(for="domestic_volunteer3") 分享志工
+									.form-check.form-check-inline
+										input#domestic_volunteer4.form-check-input(type="radio" name="國內志工種類" value="domestic_volunteer4")
+										label.form-check-label(for="domestic_volunteer4") 多媒體志工
+									.form-check.form-check-inline
+										input#domestic_volunteer5.form-check-input(type="radio" name="國內志工種類" value="domestic_volunteer5")
+										label.form-check-label(for="domestic_volunteer5") 翻譯志工
+									.form-check.form-check-inline
+										input#domestic_volunteer6.form-check-input(type="radio" name="國內志工種類" value="domestic_volunteer6")
+										label.form-check-label(for="domestic_volunteer6") 活動執行
+								.text
+									p 於一年內可以配合至少兩次的活動參與。
+										br 
+										| 請協附上「攤商、展覽、門市…等」相關活動經驗簡歷連結。
+										br
+										| 若無相關經驗者則請附上「約250字以內的自我介紹」。
+									ul
+										li 五人以下志工於可服務時段直接前往，五人以上團體需電話預約報名。
+										li 可服務時段：週一至週六 10:30-18:00
+										li 服務地點：伯利恆倉庫 243新北市泰山區新北大道六段79巷57弄8-2號
+										li 聯絡電話：02-77415519
+								.form-group
+									label.required(for="name") 姓名
+									input#name.form-control(type="text" placeholder="姓名")
+								.form-group
+									label.required(for="gender") 性別
+									.gender.d-flex.flex-wrap.mt-2
+										.form-check.p-0
+											input#male(type="radio" name="gender" value="male")
+											label.form-check-label(for="male") 男性
+										.form-check
+											input#female(type="radio" name="gender" value="female")
+											label.form-check-label(for="female") 女性
+								.form-group
+									label.required(for="birthday") 生日
+									input#birthday.form-control(type="date")
+								.form-group
+									label.required(for="phone") 聯絡電話
+									input#phone.form-control(type="tel")
+
+								.form-group
+									label.required(for="address") 現居地址
+									.address
+										label.sr-only(for="address_district_number") 
+										input#address_district_number.form-control(type="number" placeholder="郵遞區號")
+
+										select.form-control.city
+											option(value="#" disabled selected) 請選擇縣市
+											option(value="#") 台北市
+											option(value="#") 新北市
+											option(value="#") 桃園市
+											option(value="#") 我都行
+										select.form-control.district
+											option(value="#" disabled selected) 鄉鎮市區
+											option(value="#") 中山區
+											option(value="#") 中正區
+											option(value="#") 信義區
+										label.sr-only(for="domestic_address_detail") 國內地址
+										input#domestic_address_detail.form-control(type="text" placeholder="地址")
+								.form-group
+									label.required(for="others") 作品或個人簡歷連結
+									textarea.form-control(name="", rows="5" placeholder="請貼上您的作品或個人簡歷連結")
+								.form-group
+									label.required.d-block 單次志工活動可配合的時間
+									.form-check.form-check-inline
+										input#domestic_volunteer_time1.form-check-input(type="radio" name="單次志工活動可配合的時間" value="domestic_volunteer_time1")
+										label.form-check-label(for="domestic_volunteer_time1") 無限制
+									.form-check.form-check-inline
+										input#domestic_volunteer_time2.form-check-input(type="radio" name="單次志工活動可配合的時間" value="domestic_volunteer_time2")
+										label.form-check-label(for="domestic_volunteer_time2") 一次一週
+									.form-check.form-check-inline
+										input#domestic_volunteer_time3.form-check-input(type="radio" name="單次志工活動可配合的時間" value="domestic_volunteer_time3")
+										label.form-check-label(for="domestic_volunteer_time3") 一次半年
+									.form-check.form-check-inline
+										input#domestic_volunteer_time4.form-check-input(type="radio" name="單次志工活動可配合的時間" value="domestic_volunteer_time4")
+										label.form-check-label(for="domestic_volunteer_time4") 一次一年
+									.form-check.form-check-inline
+										input#domestic_volunteer_time5.form-check-input(type="radio" name="單次志工活動可配合的時間" value="domestic_volunteer_time5")
+										label.form-check-label.text-nowrap.mr-3(for="domestic_volunteer_time5") 其他
+										input.form-control(type="text" placeholder="其他")
+								.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+									a.btn.btn-md.page_go_to.m-1.text-white(href="") 送出
+
+									
+					.right
+						.card.p-0
+								img.card-img-top(src="../assets/img/fd5.png")
+								.card-body
+									h6.card-title 歡迎加入舊鞋救命國內志工行列
+									nav
+										ol.breadcrumb.p-0.my-2
+											li
+												i.fas.fa-bullhorn.fa-fw.mr-2
+											li.breadcrumb-item 國內志工
+											li.breadcrumb-item 物資整理
+									p.card-text
+										| 在《舊鞋‧救命》位於輔大後門的倉庫，每天都有來自各界的愛心物資蜂擁而至，面對日漸增大的人力需求，我們期盼有您加入我們的行列！
+						ol.mt-4
+							li 表單中所需個人資料僅用於「Step30舊鞋救命志工資料建檔」，不會對外公開或做其它用途使用。
+							li 各項類別志工，將以具備相關專業背景為優先錄用參考。
+							li 協會將會不定期舉行志工回訓、聚會，懇請積極參與，可更了解協會核心價值與使命。
+						p 誠摯邀請您加入我們，在世界各地一同為非洲朋友努力。
+		
+	
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

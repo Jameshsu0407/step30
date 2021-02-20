@@ -1,0 +1,234 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 首頁
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// banner
+		section
+			.jumbotron.top_cover.mb-0(style="background-image: url(../assets/img/banner_1.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container(style="overflow-x: hidden; clear:both;")
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true")  一個人無法改變世界
+					h2(data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true")
+						| 但我們可以攜手激起漣漪
+		// bg_parallax
+		section
+			.bg_parallax
+				.content
+					// 電腦版
+					.d-none.d-lg-block
+						.container.grid.grid_3
+							.feature.d-flex.flex-column.justify-content-center.align-items-center.py-5.px-4.bg-white(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.my-4
+									img.img-fluid.feature_icon(src="../assets/img/feature_1.png", alt="")
+									img.img-fluid.feature_icon_hover(src="../assets/img/feature_1_hover.png", alt="")
+								h4.my-3 看見困難
+								p.text-center 據世界銀行估計，世界上超過七億人口仍生活在每日1.9美金的貧窮線下，而其中超過百分之四十分布在撒哈拉沙漠以南非洲。
+							.feature.d-flex.flex-column.justify-content-center.align-items-center.py-5.px-4.bg-white(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.my-4
+									img.img-fluid.feature_icon(src="../assets/img/feature_2.png", alt="")
+									img.img-fluid.feature_icon_hover(src="../assets/img/feature_2_hover.png", alt="")
+								h4.my-3 從「看見」到「行動」
+								p.text-center 脫貧的路也許漫長，但我們相信改變正在發生。唯有付出行動，才能帶來改變與盼望。
+							.feature.d-flex.flex-column.justify-content-center.align-items-center.py-5.px-4.bg-white(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.my-4
+									img.img-fluid.feature_icon(src="../assets/img/feature_3.png", alt="")
+									img.img-fluid.feature_icon_hover(src="../assets/img/feature_3_hover.png", alt="")
+								h4.my-3 不只是 舊鞋 · 救命
+								p.text-center 從舊鞋開始，我們致力於發展各項計畫、為東非偏鄉帶來改變的契機。讓我們一同前進，逐步邁向沒有貧窮的未來。
+						// slogan
+						.text
+							h3.mb-5(data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true") 希望 ‧ 從舊鞋開始
+					// 手機版
+					.d-lg-none(style="overflow-x: hidden; clear:both;")
+						.swiper.py-5.px-4(data-aos="zoom-out" data-aos-duration="1000" data-aos-once="true")
+							- for ( var i=1 ; i<=4 ; i++)
+								.d-flex.flex-column.justify-content-center.align-items-center.bg-white.p-3
+									h4 活水計畫
+									img.img-fluid(src="../assets/img/card1.png", alt="")
+									.btn.btn-warning.mt-3 立即捐款
+
+				.parallax(style="background-image: url(../assets/img/banner_2.jpg); background-size: cover;")
+		// know_side_project
+		section
+			.container
+				.row.my-5(style="overflow-x: hidden; clear:both;")
+					.col-lg-4.d-none.d-lg-block
+						img.img-fluid(src="../assets/img/people.png", alt="" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true")
+					.col-12.col-lg-8(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true")
+						h5 一雙舊鞋，救命超乎想像
+						h2(style="color:#0e8b8f;") 舊鞋救命
+						hr.my-4
+						ul.nav.d-flex.flex-wrap
+							li.nav-item.mr-3.mb-3
+								a.active.active1(data-toggle="tab" href=".tab-pane-1") 
+									i.far.fa-circle.fa-fw.mr-1
+									|舊鞋救命
+							li.nav-item.mr-3.mb-3
+								a.active2(data-toggle="tab" href=".tab-pane-2")
+									i.far.fa-circle.fa-fw.mr-1
+									|興學計畫
+							li.nav-item.mr-3.mb-3
+								a.active3(data-toggle="tab" href=".tab-pane-3")
+									i.far.fa-circle.fa-fw.mr-1
+									|活水計畫
+							li.nav-item.mr-3.mb-3
+								a.active4(data-toggle="tab" href=".tab-pane-4")
+									i.far.fa-circle.fa-fw.mr-1
+									|養雞農耕
+							li.nav-item.mr-3.mb-3
+								a.active5(data-toggle="tab" href=".tab-pane-5")
+									i.far.fa-circle.fa-fw.mr-1
+									|國際志工
+							li.nav-item.mr-3.mb-3
+								a.active6(data-toggle="tab" href=".tab-pane-6")
+									i.far.fa-circle.fa-fw.mr-1
+									|MOVE宣教
+						.tab-content.mt-3
+							.tab-pane-1.tab-pane.fade.show.active
+								p 在東非，超過百萬人口住在深受「沙蚤」威脅的區域。沙蚤寄生於人，導致皮膚紅腫潰爛，嚴重時甚至影響性命。當人們無鞋可穿，問題便更顯嚴重。沙蚤並非無藥可醫，但只要人的雙腳與土地直接接觸，就容易反覆遭受感染。只要一雙合腳的鞋子，便能遠離沙蚤危害，回歸正常生活。
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project.html'" style="background-color:#0e8b8f;") 了解更多
+							.tab-pane-2.tab-pane.fade
+								p 缺乏物資的東非偏鄉沒水、沒電，也沒有合適的教室建築。當物資卸下之後，空貨櫃會留在當地改裝，給孩子一個安全、舒適的學習空間。同時，我們也與其他NGO組織合作，共同建造磚塊教室。我們相信每一個教室，可以培育出非洲明天的希望。
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project.html'" style="background-color:#0e8b8f;") 了解更多
+							.tab-pane-3.tab-pane.fade
+								p 世上仍有百分之十左右的人口為水資源稀缺所苦，其中許多分佈在撒哈拉以南非洲。我們在缺乏乾淨水源的地方鑿水井，使人們有安全無虞的水可使用，不再擔心這杯水是否會導致疾病；也使婦女、孩子不再需要為了取水來回奔波，有更多時間耕種田地、接受教育。
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project.html'" style="background-color:#0e8b8f;") 了解更多
+							.tab-pane-4.tab-pane.fade
+								p 東非偏鄉即使貧困，卻有豐富自然資源。我們提供雞隻給偏鄉家庭，由這些家庭養雞，用雞所生的蛋與小雞養活這些家庭。我們也與專門推廣有機農耕的NGO合作，在偏鄉進行農耕訓練，教導居民種植多樣蔬果，協助他們達到自給自足、經濟穩定，從受助者的角色變成給予者。
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project.html'" style="background-color:#0e8b8f;") 了解更多
+							.tab-pane-5.tab-pane.fade
+								p 每一年，許多志工夥伴跟隨我們的腳步進入東非偏鄉，拜訪當地家庭、與非洲媽媽們一同工作；也依據團隊的性質進行不同的服務，例如：協助清洗與治療沙蚤病患；教導婦女布衛生棉縫紉；進入村莊傳福音、舉辦佈道會與牧師訓練。在關懷當地的同時，開闊自己的生命故事。
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project.html'" style="background-color:#0e8b8f;") 了解更多
+							.tab-pane-6.tab-pane.fade
+								p 「我們支持某位宣教士很久了，但是都不太知道他在海外做什麼耶！為什麼他跟著差會到海外宣教，就好像跟我們疏離了？」 「為什麼我們差派出去的人在宣教工場幾年後，不少人都回來了，宣教真的那麼難嗎？」 「宣教士待在工場數十年，為什麼一離開，當地事工不久後就停止了？」
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project.html'" style="background-color:#0e8b8f;") 了解更多
+		// bg_parallax_2
+		section
+			.bg_parallax_2(style="height: auto")
+				.content
+					.text
+						h5(data-aos="fade-up" data-aos-duration="2000" data-aos-once="true") 不只是舊鞋・救命！
+						.d-flex.flex-wrap.justify-content-center.align-items-center(data-aos="fade-up" data-aos-duration="2000" data-aos-once="true" data-aos-delay="500")
+							h2.m-0 用愛
+							img.img-fluid.mx-2(src="../assets/img/love.png", alt="")
+							h2.m-0 翻轉赤貧
+						hr(style="border-top: 3px solid white;" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000")
+						.active_parallax.active1_parallax(data-aos="fade-up" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1500")
+							.d-flex.flex-wrap.align-items-center
+								.col-12.col-md-4
+									img.img-fluid(src="../assets/img/logo1.png", alt="")
+								.col-12.col-md-8.my-3
+									h3.text-white 2,000,000名居民接受物資援助
+									h3.text-white 5,000名病患接受沙蚤醫療
+						.active_parallax.active2_parallax.d-none
+							.d-flex.flex-wrap.align-items-center
+								.col-12.col-md-4
+									img.img-fluid(src="../assets/img/logo-2.png", alt="")
+								.col-12.col-md-8.my-3
+									h3.text-white 改建59間貨櫃教室
+									h3.text-white 建造18間磚塊教室
+						.active_parallax.active3_parallax.d-none
+							.d-flex.flex-wrap.align-items-center
+								.col-12.col-md-4
+									img.img-fluid(src="../assets/img/logo-3.png", alt="")
+								.col-12.col-md-8.my-3
+									h3.text-white 至2019年底已完成16處水井
+						.active_parallax.active4_parallax.d-none
+							.d-flex.flex-wrap.align-items-center
+								.col-12.col-md-4
+									img.img-fluid(src="../assets/img/logo-4.png", alt="")
+								.col-12.col-md-8.my-3
+									h3.text-white 55個家庭教會參與執行
+									h3.text-white 294個家庭加入計畫
+									h3.text-white 2個孤兒院受益
+						.active_parallax.active5_parallax.d-none
+							.d-flex.flex-wrap.align-items-center
+								.col-12.col-md-4
+									img.img-fluid(src="../assets/img/logo-5.png", alt="")
+								.col-12.col-md-8.my-3
+									h3.text-white 探訪關懷100個偏鄉家庭
+									h3.text-white 清洗、治療1500雙腳
+									h3.text-white 教導3500位婦女布衛生棉製作
+						.active_parallax.active6_parallax
+				.parallax(style="background-image: url(../assets/img/bg-3.jpg);")
+		// news
+		section
+			.container
+				.row
+					.title_section.text-center.mt-5.mb-5.col-12
+						img(src="../assets/img/ttl-bar.png" alt="")
+						h3 最新消息
+						h6 回首過去 , 瞻望未來 !
+					#cards.cards
+						- for ( var i=1 ; i<=6 ; i++)
+							.card.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								a(href="card_info.html")
+									img.card-img-top(src="../assets/img/card2.png" alt="Card image cap")
+									.card-body
+										.date.color_blue
+											span.d-block.day 28
+											span.d-block SEP
+											span.d-block 2020
+										h6.card-title.text-truncate 他不是我弟弟
+										nav
+											ol.breadcrumb.p-0
+												li
+													i.fas.fa-bullhorn.fa-fw.color_blue.mr-2
+												li.breadcrumb-item 計畫
+												li.breadcrumb-item.color_blue 活水計畫
+										p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+										.more.mt-3
+											.text-secondary
+												i.fas.fa-plus.fa-fw.mr-2
+												| 了解詳情
+					.look_more.mt-3.mb-5
+						a(href="breaking_news.html") 查看更多
+		// project story
+		section
+			.container
+				.row
+					.title_section.text-center.mt-5.mb-5.col-12
+						img.img-fluid(src="../assets/img/ttl-bar.png" alt="")
+						h3 計畫故事
+						h6 回首過去 , 瞻望未來 !
+					.cards
+						- for ( var i=1 ; i<=6 ; i++)
+							.card.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								a(href="card_info.html")
+									img.card-img-top(src="../assets/img/card2.png" alt="Card image cap")
+									.card-body
+										.date.color_blue
+											span.d-block.day 28
+											span.d-block SEP
+											span.d-block 2020
+										h6.card-title.text-truncate 他不是我弟弟
+										nav
+											ol.breadcrumb.p-0
+												li
+													i.fas.fa-bullhorn.fa-fw.color_blue.mr-2
+												li.breadcrumb-item 計畫
+												li.breadcrumb-item.color_blue 活水計畫
+										p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+										.more.mt-3
+											.text-secondary
+												i.fas.fa-plus.fa-fw.mr-2
+												| 了解詳情
+					.look_more.mt-3.mb-5
+						a(href="project_story.html") 查看更多
+
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug

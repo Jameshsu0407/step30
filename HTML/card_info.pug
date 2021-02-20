@@ -1,0 +1,73 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 卡片單一內容頁
+		//- 匯入css
+		include head.pug
+		link(rel="stylesheet", href="../assets/css/color_blue.css")
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入pc版社群分享
+		include social_share_pc.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/card_info_top_cover.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 最新消息
+						nav
+							ol.breadcrumb
+								li.breadcrumb-item
+									a(href="#") 首頁
+								li.breadcrumb-item
+									a(href="#") 最新動態
+								li.breadcrumb-item.active
+									a 最新消息
+		// content
+		section
+			.container.my-5
+				.card_info
+					//- 匯入手機版社群分享
+					include social_share_phone.pug
+					h3 因為有愛，讓世界更加美好。
+					span.d-block.my-2
+						i.far.fa-calendar-alt.fa-fw.mr-2
+						| 15&nbsp;MAR&nbsp;2020
+					nav
+						ol.breadcrumb.p-0.my-2
+							li
+								i.fas.fa-bullhorn.fa-fw.mr-2
+							li.breadcrumb-item 計畫
+							li.breadcrumb-item 活水計畫
+					.img_area.my-4
+						img.img-fluid(src="../assets/img/card1.png", alt="")
+					.text_area.py-2.mb-5
+						h4 【因為有愛，讓世界更加美好。】
+						p 住在肯亞Siaya村莊的小孩Danny，每天都要往返4趟路程，為一家大小取水，全村103戶人家，都倚賴一口小水塘的水飲用，看著黃澄澄的水源，淺淺的池塘，混濁的看不見底，卻是家家戶戶每天使用的，他們沒有選擇。
+						p 在非洲偏鄉地區，水資源非常缺乏，婦女及孩同每天都要花數小時的時間取水，耽誤了孩子的上學及婦女的勞動經濟能力，且取得的水資源極度混濁、不堪飲用，常為人、畜共用的水源，引起孩子的腹瀉、寄生蟲感染、瘧疾等疾病。
+						p 根據世界衛生組織（WHO）統計報告，全球至少有8.4億人口沒有穩定的乾淨水資源能使用，相當於世界上每9個人，就有1人為水而引響生活。
+						p 從2016年起至今，活水計畫已經在非洲興建14口水井，且還有1口水井已經在建置過程中，受益人數已經愈萬人，幫助偏遠地區人民有乾淨且便利的水源使用。
+						p 透過深入偏鄉的田野調查，活水計畫了解更多當地的需要，2019年有更大的願景，立志在非洲增建30口水井，受益人數至少達3萬人次，幫助3,000戶家庭及更多的孩童能順利就學。
+						p 活水計畫邀請您一起參與，因為有愛，讓世界更加美好。
+					.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+						a.btn.btn-lg.btn-secondary.m-1(href="#") 回上一頁
+						a.btn.btn-lg.page_go_to.m-1.text-white(href="#")
+							i.fas.fa-angle-double-left.fa-fw.mr-1
+							| 上一則					
+						a.btn.btn-lg.page_go_to.m-1.text-white(href="#") 
+							| 下一則
+							i.fas.fa-angle-double-right.fa-fw.ml-1
+
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug

@@ -1,0 +1,73 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 聯絡我們
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/contact.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 聯絡我們
+		// contact
+		section
+			.container.d-flex.flex-wrap.my-5
+				.col-12.col-md-5
+					h2.mb-5 我們將盡快與您聯絡
+					p
+						i.fas.fa-map-marker-alt.fa-fw.mr-2
+						| 新北市泰山區 新北大道六段79巷57弄8之2號
+					p
+						i.fas.fa-phone-alt.fa-fw.mr-2
+						a(href="tel:02-7741-5519") 02-7741-5519
+					.social_icon.d-flex.align-items-center.my-5
+						a(href="https://www.facebook.com/step30.org/" target="_blank")
+							i.fab.fa-facebook.fa-fw.mr-4
+						a(href="https://www.instagram.com/step30ministries/" target="_blank")
+							i.fab.fa-instagram.fa-fw.mr-4
+						a(href="https://www.youtube.com/channel/UCf8xJ5H1hfvfXK6ywoXKc-w" target="_blank")
+							i.fab.fa-youtube.fa-fw.mr-4
+						a(href="https://line.me/R/ti/p/%40fhk8334z" target="_blank")
+							i.fab.fa-line.fa-fw.mr-4
+				.col-12.col-md-7
+					.form
+						.form-group
+							label.required(for="name") 姓名
+							input#name.form-control(type="text" placeholder="請輸入您的姓名")
+						.form-group
+							label.required(for="phone") 聯絡電話
+							input#phone.form-control(type="tel" placeholder="請輸入您的聯絡電話")
+						.form-group
+							label.required(for="email") 電子郵件
+							input#email.form-control(type="email" placeholder="請輸入您的電子郵件")
+						.form-group
+							label.required(for="title") 主旨
+							input#title.form-control(type="email" placeholder="主旨")
+						.form-group
+							label.required(for="content") 內容
+							textarea#content.form-control(rows="10" placeholder="請輸入您的訊息內容")
+						.form-group
+							.input-group
+								input.form-control(type="text" placeholder="驗證碼" style="max-width: 250px")
+								.input-group-append
+									img.img-fluid(src="../assets/img/validation.png", alt="")
+						.d-flex.justify-content-center.align-items-center.mt-5
+							a.btn.text-white.px-4(style="background-color:#0e8b8f" href="") 送出
+		
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

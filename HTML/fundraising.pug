@@ -1,0 +1,304 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 參與募資
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/fundraising.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 參與募資
+		// text
+		section
+			.container.my-5
+				.text.text-center
+					p.font-weight-bold.mb-5 深耕，才能真正翻轉一所學校，才能影響一個社區
+					p 舊鞋救命將愛心資源導入貧弱村落與學校，以健康促進、教育扶助、經濟發展、醫療照護、關懷陪伴為核心服務，長期在地深耕。我們根據不同的環境、以及不同階段的需求，進行因地制宜的資金募集
+					p.font-weight-bold.mb-5 邀請您深入認識貧弱村落的生存困境，請選擇您願意支持的資助項目，一起匯聚愛心，翻轉生命的希望
+		// selector
+		section
+			.container.my-5
+				#selector_nav.fundraising_selector_nav.d-flex.flex-wrap.justify-content-center.align-content-center
+					button.active 執行中
+					button 舊鞋救命
+					button 興學計畫
+					button 活水計畫
+					button 養雞農耕
+					button 國際志工
+					button.finished 已結案
+				#selector_content.my-3
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd1.png")
+							.card-body
+								h6.card-title.text-truncate 2020 舊鞋救命
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0.m-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_brown
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_brown 舊鞋救命
+								span.main_project_number.d-block.mb-4
+									i.fas.fa-user.fa-fw.mr-2.color_brown
+									| 1523
+								p.card-text
+									| 一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd1.png" alt="Card image cap")
+							.card-body
+								h6.card-title.text-truncate 幫助 Mukono村莊 建造太陽能水井
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_brown
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_brown 舊鞋救命
+								.data.my-2
+									.chart(data-percent="41.6" data-bar-color="#cd7e68")
+										.count_number.color_brown(data-number="41.6")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$1,539,084
+										h6 目標：NT$3,700,000
+								p.card-text
+									| 一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd2.png")
+							.card-body
+								h6.card-title.text-truncate 2020 疫情中的偏鄉教育
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0.m-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_green
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_green 興學計畫
+								span.main_project_number.d-block.mb-4
+									i.fas.fa-user.fa-fw.mr-2.color_green
+									| 1523
+								p.card-text
+									| 東非的偏鄉教育資源匱乏，疫情又迫使肯亞學校全面停課。 一起幫助孩子在明年能安心迎接開學！
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd2.png" alt="Card image cap")
+							.card-body
+								h6.card-title.text-truncate  支持課桌椅添購
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_green
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_green 興學計畫
+								.data.my-2
+									.chart(data-percent="4.02" data-bar-color="#739f3d")
+										.count_number.color_green(data-number="4.02")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$80,388
+										h6 目標：NT$2,000,000
+								p.card-text
+									| 東非的偏鄉教育資源匱乏，疫情又迫使肯亞學校全面停課。 一起幫助孩子在明年能安心迎接開學！
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd1.png" alt="Card image cap")
+							.card-body
+								h6.card-title.text-truncate 2020活水計畫
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_blue
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_blue 活水計畫
+								.data.my-2
+									.chart(data-percent="41.6" data-bar-color="#028DCB")
+										.count_number.color_blue(data-number="41.6")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$1,539,084
+										h6 目標：NT$3,700,000
+								p.card-text
+									| 面臨當地嚴峻的水資源問題，我們選擇成為解決問題的人，選擇發起計畫，陪伴偏鄉居民走上拓荒取水之路。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd1.png" alt="Card image cap")
+							.card-body
+								h6.card-title.text-truncate 2020養雞農耕
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_bright_green
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_bright_green 養雞農耕
+								.data.my-2
+									.chart(data-percent="41.6" data-bar-color="#86E027")
+										.count_number.color_bright_green(data-number="41.6")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$1,539,084
+										h6 目標：NT$3,700,000
+								p.card-text
+									| 一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd1.png" alt="Card image cap")
+							.card-body
+								h6.card-title.text-truncate 2020Move宣教
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_dark_red
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_dark_red Move宣教
+								.data.my-2
+									.chart(data-percent="41.6" data-bar-color="#8a0b16")
+										.count_number.color_dark_red(data-number="41.6")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$1,539,084
+										h6 目標：NT$3,700,000
+								p.card-text
+									| 一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 認養資助
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd3.png" alt="Card image cap")
+							.card-body
+								h6.card-title.text-truncate 希望蜂箱・萬人助養計畫
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+									span.complete.text-white.bg-success.text-nowrap 已結案
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_brown
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_brown 舊鞋救命
+								.data.my-2
+									.chart(data-percent="45.65" data-bar-color="#cd7e68")
+										.count_number.color_brown(data-number="45.65")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$228,245
+										h6 目標：NT$500,000
+								p.card-text
+									| 2020/8/1 公告- 請詳閱內文
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 查看專案
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd4.png" alt="Card image cap")
+							.card-body
+								h5.card-title.text-truncate 2020 【共縫“女子”事】
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+									span.complete.text-white.bg-success.text-nowrap 已結案
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_brown
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_brown 舊鞋救命
+								//- .data.my-2
+									.chart(data-percent="26.57" data-bar-color="#cd7e68")
+										.count_number.color_brown(data-number="26.57")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$26,579
+										h6 目標：NT$100,000
+								p.card-text
+									| 2020/8/1 公告- 請詳閱內文
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 查看專案
+					.card.p-0
+						a(href="fundraising_detail.html")
+							img.card-img-top(src="../assets/img/fd5.png" alt="Card image cap")
+							.card-body
+								h5.card-title.text-truncate 2020 新冠疫情 – 非洲緊急援助
+								span.date_range.text-secondary
+									i.far.fa-calendar-alt.fa-fw.mr-2
+									| 2020/01/01 ~ 2020/12/31
+									span.complete.text-white.bg-success.text-nowrap 已結案
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_brown
+										li.breadcrumb-item 募資
+										li.breadcrumb-item.color_brown 舊鞋救命
+								.data.my-2
+									.chart(data-percent="54.19" data-bar-color="#cd7e68")
+										.count_number.color_brown(data-number="54.19")
+									.dollar.d-flex.justify-content-center.flex-column
+										h5 NT$189,644
+										h6 目標：NT$350,000
+								p.card-text
+									| 2020年新型冠狀病毒COVID-19逐漸蔓延至東非領土，各國接連實施防疫鎖國政策，限制人民外出、群聚、並禁止諸多商業行為，防禦病毒的擴散，但對於積蓄短缺的貧困居民，鎖國也等於斷絕日常謀生的糧食，因應此疫情發展，舊鞋救命協會將針對烏干達城市貧民區以及肯亞偏鄉部落發放糧食急難救助包。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 查看專案
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

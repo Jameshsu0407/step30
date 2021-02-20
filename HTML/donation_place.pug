@@ -1,0 +1,68 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 成為小型募集點
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/story.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 成為小型募集點
+		section
+			.container.my-5(style="overflow: hidden; clear:both;")
+				h2.text-warning.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 小型募集點申請流程
+				img.img-fluid.mb-3(src="../assets/img/place.png", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") “非”你不可 — 讓我們一起送愛到非洲
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 「我是某某國中的老師，我們最近剛好上到非洲議題的課程，想要透過全校師生一起來收集物資，捐給非洲的大小朋友，幫助他們，同時也讓孩子們知道自己真的很幸福…」
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 「最近公司想要發起物資捐贈，讓同仁們一起將家裡已經用不到的鞋子整理整理，把愛心送到非洲…」
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 過去，應該沒想過一雙鞋子除了能夠讓1個人的生命延續下去外，還能使１個人對未來充滿希望與期待。過去，你自己曾捐過鞋，現在，邀請你所屬的單位一同來參與，讓想要轉變成實際行動，成為我們的小型募集點，一起送愛到非洲。
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ＂一個人走的快，一群人走的遠＂～非洲諺語
+
+				h6.text-warning.my-3(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 成為小型募集點的條件與須知
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="100") **規模大小不拘的單位/團體/組織/企業/學校/教會
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="200") **活動日期由各單位自行決定，不受限於公告的活動時間
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300") **募集之物資項目由各單位自行決定(鞋子.衣物.包包)
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400") **募集之物資數量不限
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") **募集之物資需自行送回/寄回伯利恆倉庫
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="600") **需使用募集專用袋(由協會寄出)
+
+				h6.text-warning.my-3(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 小型募集點申請流程
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="100") 執行前預備：
+					a.text-info(href="") 下載及瀏覽募集相關資料
+					| 。
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="200") 活動執行步驟１：完成
+					a.text-info(href="") 合作備忘錄
+					| 簽訂。
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="300") 活動執行步驟２：確認物資整理方式，
+					a.text-info(href="") 物資整理流程影片
+					| ，務必觀看影片內容。
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="400") 活動執行步驟３：活動結束，將物資集相關物品送回或寄回伯利恆倉庫，完成活動結案記錄填寫及活動照片(活動結案記錄檔案於募集相關資料夾中)
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 
+					| <<溫馨小提醒>>
+					br
+					| 合作備忘錄中公益募款的部份，為了要讓大家的愛心物資順利送到非洲朋友手中，誠摯邀請您們加入物資運費募集行列~
+					br
+					| （台灣送到非洲運費 平均$30/雙鞋 自由參加 不限金額)
+
+
+
+
+
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

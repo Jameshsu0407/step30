@@ -1,0 +1,75 @@
+// 活水計畫
+$color_blue: #028DCB
+
+// ====================================================================================================
+// 共用部分
+// ====================================================================================================
+// 回到上方
+#go_to_top
+    background-color: $color_blue !important
+// footer
+footer
+    .icons
+        a
+            color: $color_blue !important
+            &:hover
+                img
+                    filter: invert(41%) sepia(94%) saturate(2477%) hue-rotate(172deg) brightness(90%) contrast(98%) !important
+    .overlay
+        .vice_nav
+            .vice_nav_list
+                .list
+                    li
+                        a
+                            &:hover
+                                color: $color_blue !important
+// 上、下一步連結
+.page_link
+    .page_go_to
+        background-color: $color_blue
+        &:hover
+            background-color: darken($color_blue,10% )  
+.card
+    &:hover
+        .card-title
+            color: $color_blue !important
+        .more
+            a,i
+                color: $color_blue !important
+    .card-title
+        font-size: 1.2rem
+    .card-body
+        .date
+            color: $color_blue !important
+        nav
+            ol
+                li
+                    &:nth-last-child(1)
+                        color: $color_blue !important
+                    i
+                        color: $color_blue !important
+// 有濾鏡的視差
+.bg_parallax
+    .parallax__container
+        &::after
+            background-color: $color_blue !important
+// 查看更多
+.look_more
+    a
+        background-color: lighten( $color_blue ,10% ) !important
+        &:hover
+            background-color: $color_blue !important
+// ====================================================================================================
+
+
+// 卡片單一內容
+.card_info
+    span
+        color: $color_blue
+    nav
+        ol
+            li
+                &:nth-last-child(1)
+                    color: $color_blue
+                i
+                    color: $color_blue

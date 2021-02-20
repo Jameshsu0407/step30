@@ -1,0 +1,51 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 合作夥伴
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/friends.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 合作夥伴
+		// selector
+		section
+			.container.my-5
+				.text-center.my-5
+					h6 因為有這些夥伴的支持，讓《舊鞋救命》一路從無到有，得到了許多技術、專業意見、心靈層面以及實質的援助，
+					h6 感謝在公益的路上有您相伴，願我們各自的願景，都能在所屬的美好土地裡綻放光彩
+				.grid.grid_4.my-3
+					- for ( var i=1 ; i<=5 ; i++)
+						.text
+							h6.card-title.text-truncate 中壢校區基督教教會
+							a(href="#" target="_blank")
+								.card.p-0(data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+									img.card-img-top(src="../assets/img/friend1.png" alt="Card image cap")
+						.text
+							h6.card-title.text-truncate 中壢校區基督教教會
+							a(href="#" target="_blank")
+								.card.p-0(data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+									img.card-img-top(src="../assets/img/friend2.png" alt="Card image cap")
+				.text-center.my-5
+					h6 若您有意願洽談合作事宜，請撥打專線 0800-660-026 (10:00~18:00，周日休息)，將有專人與您詳談
+
+                   
+
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

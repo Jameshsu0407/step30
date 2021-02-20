@@ -1,0 +1,85 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 其他捐款方式
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/donate_top_cover.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 其他捐款方式
+		// text
+		section
+			.container
+				.text-center.my-5
+					h6 If You Want To Go Fast Go Alone. If You Want To Go Far Go Together.
+					h6 一個人走的比較快，一群人走的比較遠。
+					h6 邀請您一起同行。
+					br
+					h6 109年舊鞋救命國外及國內救援計畫(第五期)
+					h6 勸募活動許可文號：衛部救字第1081370480號
+		// content
+		section
+			.container.my-5
+				.grid.grid1(style="overflow-x: hidden; clear:both;")
+					.wrap.grid(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+						.pic.d-flex.flex-wrap.justify-content-center.align-items-center
+							img.img-fluid(src="../assets/img/oth_donate1.png", alt="")
+						.text
+							img.img-fluid(src="../assets/img/ttl-bar.png", alt="")
+							h5 手機捐款
+							span.d-block 中華電信手機用戶可直接撥打
+								i.fas.fa-phone.fa-fw.mr-1(style="color:#0e8b8f")
+								a(href="tel:51107" style="color:#0e8b8f") 51107
+								|，進入舊鞋救命捐款平台，並依照語音指示操作完成小額捐款
+					.wrap.grid(data-aos="fade-left" data-aos-duration="1500" data-aos-once="true")
+						.pic.d-flex.flex-wrap.justify-content-center.align-items-center
+							img.img-fluid(src="../assets/img/oth_donate2.png", alt="")
+						.text
+							img.img-fluid(src="../assets/img/ttl-bar.png", alt="")
+							h5 臨櫃匯款
+							span.d-block 銀行：玉山銀行 新板特區分行
+							span.d-block 銀行代號：808
+							span.d-block 戶名：舊鞋救命國際基督關懷協會
+							span.d-block 帳號：0587-940-010786
+					.wrap.grid(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+						.pic.d-flex.flex-wrap.justify-content-center.align-items-center
+							img.img-fluid(src="../assets/img/oth_donate3.png", alt="")
+						.text
+							img.img-fluid(src="../assets/img/ttl-bar.png", alt="")
+							h5 郵政劃撥
+							span.d-block 戶名：社團法人舊鞋救命國際基督關懷協會
+							span.d-block 帳號：50344838
+					.wrap.grid(data-aos="fade-left" data-aos-duration="1500" data-aos-once="true")
+						.pic.d-flex.flex-wrap.justify-content-center.align-items-center
+							img.img-fluid(src="../assets/img/oth_donate4.png", alt="")
+						.text
+							img.img-fluid(src="../assets/img/ttl-bar.png", alt="")
+							h5 愛心發票捐贈
+							span.d-block 捐贈碼為：3030，可在商店結帳時告知此代碼，櫃台人員即會知道您欲將該次消費的發票贈予給我們
+					.wrap.grid(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+						.pic.d-flex.flex-wrap.justify-content-center.align-items-center
+							img.img-fluid(src="../assets/img/oth_donate5.png", alt="")
+						.text
+							img.img-fluid(src="../assets/img/ttl-bar.png", alt="")
+							h5 收據申請
+							span 網址：
+								a(href="https://forms.gle/ADaXc8ivf2jLbv3z6" style="color:#0e8b8f") 立即前往
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

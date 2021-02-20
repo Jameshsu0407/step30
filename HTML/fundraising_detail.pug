@@ -1,0 +1,182 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 募資項目
+		//- 匯入css
+		include head.pug
+		link(rel="stylesheet", href="../assets/css/color_blue.css")
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/card_info_top_cover.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 募資項目
+						nav
+							ol.breadcrumb
+								li.breadcrumb-item
+									a.primary_color(href="fundraising.html") 參與募資
+								li.breadcrumb-item.active
+									a 募資項目
+		// title
+		section
+			.container.my-5
+				.fundraising_detail_title
+					.pic.d-flex.justify-content-center.align-items-center
+						img.img-fluid(src="../assets/img/fd1.png", alt="")
+					.text
+						h3 2020 新冠疫情 – 非洲緊急援助
+						hr
+						span.date_range.text-secondary
+								i.far.fa-calendar-alt.fa-fw.mr-2
+								| 2020/01/01 ~ 2020/12/31
+						nav
+							ol.breadcrumb.p-0
+								li
+									i.fas.fa-bullhorn.fa-fw.mr-2
+								li.breadcrumb-item 募資
+								li.breadcrumb-item
+									a(href="#") 活水計畫
+						p 2020年新型冠狀病毒COVID-19逐漸蔓延至東非領土，各國接連實施防疫鎖國政策，限制人民外出、群聚、並禁止諸多商業行為，防禦病毒的擴散，但對於積蓄短缺的貧困居民，鎖國也等於斷絕日常謀生的糧食，因應此疫情發展，舊鞋救命協會將針對烏干達城市貧民區以及肯亞偏鄉部落發放糧食急難救助包。
+						hr
+		// content
+		section
+			.container.my-5
+				.running_project
+					.left
+						//- 標籤
+						ul.nav.nav-tabs(role="tablist")
+							li.nav-item
+								a.nav-link.text-white.active(data-toggle="tab" onclick="switch_tab('tab_service')") 服務介紹
+							li.nav-item
+								a.nav-link.text-white(data-toggle="tab" onclick="switch_tab('tab_news')") 最新消息
+							li.nav-item
+								a.nav-link.text-white(data-toggle="tab" onclick="switch_tab('tab_album')") 專案相簿
+							li#nav_sponsor.nav-item
+								a.nav-link.text-white(data-toggle="tab" onclick="switch_tab('tab_sponsor')") 認養者
+							li.nav-item
+								a.nav-link.text-white(data-toggle="tab" onclick="switch_tab('tab_report')") 成果報告
+						.tab-content
+							#tab_service.tab-pane1.p-3.show.active
+								h3.color_blue 111111活水計畫: 滴水穿石的改變
+								p 一次又一次深入東非偏鄉，使我們看見邊遠地區的人們是如何為了取水而耗盡心力。他們平均每天步行超過4小時收集家庭所需用水，取水時間過長更使許多孩子被迫失學。然而，喝一口乾淨的水不應是選擇，而是每個人都該擁有的權利，活水計畫因此展開。
+								p 活水計畫從2016年開始啟動募資，截至目前已在東非建造16口水井，為當地居民省下平均每日2.15小時的取水時間，等同於台灣孩子完成2堂課的時間，也等於當地母親準備一餐的時間。面臨當地嚴峻的水資源問題，我們選擇成為解決問題的人，選擇發起計畫，陪伴偏鄉居民走上拓荒取水之路。
+								p 一次又一次深入東非偏鄉，使我們看見邊遠地區的人們是如何為了取水而耗盡心力。他們平均每天步行超過4小時收集家庭所需用水，取水時間過長更使許多孩子被迫失學。然而，喝一口乾淨的水不應是選擇，而是每個人都該擁有的權利，活水計畫因此展開。
+								p 活水計畫從2016年開始啟動募資，截至目前已在東非建造16口水井，為當地居民省下平均每日2.15小時的取水時間，等同於台灣孩子完成2堂課的時間，也等於當地母親準備一餐的時間。面臨當地嚴峻的水資源問題，我們選擇成為解決問題的人，選擇發起計畫，陪伴偏鄉居民走上拓荒取水之路。
+								p 一次又一次深入東非偏鄉，使我們看見邊遠地區的人們是如何為了取水而耗盡心力。他們平均每天步行超過4小時收集家庭所需用水，取水時間過長更使許多孩子被迫失學。然而，喝一口乾淨的水不應是選擇，而是每個人都該擁有的權利，活水計畫因此展開。
+								p 活水計畫從2016年開始啟動募資，截至目前已在東非建造16口水井，為當地居民省下平均每日2.15小時的取水時間，等同於台灣孩子完成2堂課的時間，也等於當地母親準備一餐的時間。面臨當地嚴峻的水資源問題，我們選擇成為解決問題的人，選擇發起計畫，陪伴偏鄉居民走上拓荒取水之路。
+								p 一次又一次深入東非偏鄉，使我們看見邊遠地區的人們是如何為了取水而耗盡心力。他們平均每天步行超過4小時收集家庭所需用水，取水時間過長更使許多孩子被迫失學。然而，喝一口乾淨的水不應是選擇，而是每個人都該擁有的權利，活水計畫因此展開。
+								p 活水計畫從2016年開始啟動募資，截至目前已在東非建造16口水井，為當地居民省下平均每日2.15小時的取水時間，等同於台灣孩子完成2堂課的時間，也等於當地母親準備一餐的時間。面臨當地嚴峻的水資源問題，我們選擇成為解決問題的人，選擇發起計畫，陪伴偏鄉居民走上拓荒取水之路。
+								img.img-fluid(src="../assets/img/card1.png", alt="")
+								p.text-danger 客戶自行編輯區域...
+							#tab_news.tab-pane1.p-3.d-none
+								.cards.grid
+									- for ( var i=1 ; i<=8 ; i++)
+										.card.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+											a(href="card_info.html")
+												img.card-img-top(src="../assets/img/card2.png" alt="Card image cap")
+												.card-body
+													.date.secondary_color
+														span.d-block.day 28
+														span.d-block SEP
+														span.d-block 2020
+													h6.card-title.text-truncate 他不是我弟弟
+													nav
+														ol.breadcrumb.p-0
+															li
+																i.fas.fa-bullhorn.fa-fw.secondary_color.mr-2
+															li.breadcrumb-item 計畫
+															li.breadcrumb-item.secondary_color 活水計畫
+													p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+													.more.mt-3
+														.text-secondary
+															i.fas.fa-plus.fa-fw.mr-2
+															| 了解詳情
+								include page.pug
+							#tab_album.tab-pane1.p-3.d-none
+								.photos
+									- for ( var i=1 ; i<=4 ; i++)
+										a(data-fslightbox="gallery" href="../assets/img/card1.png" title="水井：不只提供淨水，更滋養良田" data-aos="fade-up" data-aos-duration="800" data-aos-once="true")
+											img.img-fluid(src="../assets/img/card1.png" alt="")
+											.caption 水井：不只提供淨水，更滋養良田
+										a(data-fslightbox="gallery" href="../assets/img/card2.png" title="他不是我弟弟" data-aos="fade-up" data-aos-duration="800" data-aos-once="true")
+											img.img-fluid(src="../assets/img/card2.png" alt="")
+											.caption 他不是我弟弟
+							#tab_sponsor.tab-pane1.p-3.d-none
+								- for ( var i=1 ; i<=15 ; i++)
+									.sponsor_info.d-flex.flex-wrap.flex-column.justify-content-center.align-items-center
+										img.img-fluid.rounded-circle.mb-2(src="../assets/img/default_picture.png", alt="")
+										span 王〇明
+								include page.pug
+							#tab_report.dropdown_animation.tab-pane1.p-3.d-none
+								h3.color_blue 成果報告
+								.wrap
+									a.title.collapsed
+										.grey_block
+											i.fas.fa-times.fa-fw.open
+										.text NT500 -> 幫助一名非洲孩子有乾淨的水喝幫助一名非洲孩子有乾淨的水喝
+									.content
+										h4 幫助一名非洲孩子有乾淨的水喝幫助一名非洲孩子有乾淨的水喝
+										p 內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明
+										img.img-fluid(src="../assets/img/card1.png", alt="")
+								- for(var i=1 ; i<=4 ; i++)
+									.wrap
+										a.title.collapsed
+											.grey_block
+												i.fas.fa-times.fa-fw
+											.text NT500 -> 幫助一名非洲孩子有乾淨的水喝幫助一名非洲孩子有乾淨的水喝
+										.content.collapse
+											h4 幫助一名非洲孩子有乾淨的水喝幫助一名非洲孩子有乾淨的水喝
+											p 內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明內文說明
+											img.img-fluid(src="../assets/img/card1.png", alt="")
+					.right
+						form.sticky-top(style="top: 100px;")
+							h3.text-center.primary_color 募資項目
+							.card.p-0
+								img.card-img-top(src="../assets/img/fd5.png")
+								.card-body
+									h6.card-title.text-truncate 2020 新冠疫情 – 非洲緊急援助
+									.data.my-2
+										.chart(data-percent="52.19" data-bar-color="#028DCB")
+											.count_number.color_blue(data-number="52.19")
+										.dollar.d-flex.justify-content-center.flex-column
+											h5 NT$521,979
+											h6 目標：NT$1,000,000
+											h6
+												i.fas.fa-user.fa-fw.mr-1
+												|472
+									p.card-text
+										| 2020年新型冠狀病毒COVID-19逐漸蔓延至東非領土，各國接連實施防疫鎖國政策，限制人民外出、群聚、並禁止諸多商業行為，防禦病毒的擴散，但對於積蓄短缺的貧困居民，鎖國也等於斷絕日常謀生的糧食，因應此疫情發展，舊鞋救命協會將針對烏干達城市貧民區以及肯亞偏鄉部落發放糧食急難救助包。
+									p 
+										strong 請輸入贊助金額：NT$
+									input.form-control(type="number" placeholder="最小贊助金額500元" min="500" step="100")
+							// 與主計畫同名的子計畫
+							.card.p-0(data-tags="執行中,舊鞋救命")
+								img.card-img-top(src="../assets/img/fd1.png")
+								.card-body
+									h6.card-title.text-truncate 2020 舊鞋救命
+									span.main_project_number.d-block.mb-2(style="height: auto;")
+										i.fas.fa-user.fa-fw.mr-2.color_blue
+										| 1523
+									p.card-text
+										| 一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。一雙舊鞋，救命超乎想像。還給孩子自由奔跑的機會。
+									p 
+										strong 請輸入贊助金額：NT$
+									input.form-control(type="number" placeholder="最小贊助金額500元" min="500" step="100")
+							.donate_btn.mt-3
+								a.btn(href="shopping_cart1.html") 加入購物車		
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

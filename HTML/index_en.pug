@@ -1,0 +1,112 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title index
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入navbar
+		include navbar_en.pug
+		// banner
+		section
+			.jumbotron.top_cover.mb-0(style="background-image: url(../assets/img/banner_1.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container(style="overflow-x: hidden; clear:both;")
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="500") STEP30
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000") INTERNATIONAL
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1500") MINISTRIES
+					h2(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="2000") WITH FORGOTTEN PEOPLE CONNECTION
+		// bg_parallax
+		section
+			.bg_parallax(style="height: auto;")
+				.content
+					// 電腦版
+					.d-block
+						.container.grid.grid_3.en_grid
+							.card.feature.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="border: none;")
+								img.card-img-top(src="../assets/img/en_pic1.jpg" alt="Card image cap")
+								.card-body
+									p.card-text(style="display:block; height:auto;") In many countries of East Africa, millions of feet are infected with a bug called jiggers, this bug burrows under the skin and toenails laying eggs and leaving painful soars. Some have even died from being overly affected by this bug.									
+							.card.feature.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="border: none;")
+								img.card-img-top(src="../assets/img/en_pic2.jpg" alt="Card image cap")
+								.card-body
+									p.card-text.mb-3(style="display:block; height:auto;") Throughout the world millions of quality shoes are thrown away every year!
+									p.card-text.mb-3(style="display:block; height:auto;") But your shoes can be reused in providing protection for those who are suffering from the infection of jiggers.
+							.card.feature.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="border: none;")
+								img.card-img-top(src="../assets/img/en_pic3.jpg" alt="Card image cap")
+								.card-body
+									p.card-text.mb-3(style="display:block; height:auto;") More than providing shoes, the containers that are used to transport our shoes will be turned into a container school providing education for children in Africa.
+						// slogan
+						.text.text-center
+							h3.mb-5(data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true") What Is The Solution. Shoes!
+				.parallax(style="background-image: url(../assets/img/banner_2.jpg); background-size: cover;")
+		// know_side_project
+		section
+			.container
+				.row.my-5(style="overflow-x: hidden; clear:both;")
+					.col-lg-4.d-none.d-lg-block
+						img.img-fluid(src="../assets/img/people.png", alt="" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true")
+					.col-12.col-lg-8(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true")
+						h2(style="color:#0e8b8f;") STEP30
+						hr.my-4
+						ul.nav.d-flex.flex-wrap
+							li.nav-item.mr-3.mb-3
+								a.active.active1(data-toggle="tab" href=".tab-pane-1") 
+									i.far.fa-circle.fa-fw.mr-1
+									| Jiggers treatment
+							li.nav-item.mr-3.mb-3
+								a.active2(data-toggle="tab" href=".tab-pane-2")
+									i.far.fa-circle.fa-fw.mr-1
+									| Education
+							li.nav-item.mr-3.mb-3
+								a.active3(data-toggle="tab" href=".tab-pane-3")
+									i.far.fa-circle.fa-fw.mr-1
+									| Living water
+							li.nav-item.mr-3.mb-3
+								a.active4(data-toggle="tab" href=".tab-pane-4")
+									i.far.fa-circle.fa-fw.mr-1
+									| Kuku farming
+							li.nav-item.mr-3.mb-3
+								a.active5(data-toggle="tab" href=".tab-pane-5")
+									i.far.fa-circle.fa-fw.mr-1
+									| International volunteer
+							li.nav-item.mr-3.mb-3
+								a.active6(data-toggle="tab" href=".tab-pane-6")
+									i.far.fa-circle.fa-fw.mr-1
+									| Move
+						.tab-content.mt-3
+							.tab-pane-1.tab-pane.fade.show.active
+								p We provide shoes, jigger treatments as well as hygiene and sanitation education for remote villages.
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project_en.html'" style="background-color:#0e8b8f;") more
+							.tab-pane-2.tab-pane.fade
+								p We build schools and training centers to give children a safe learning environment.
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project_en.html'" style="background-color:#0e8b8f;") more
+							.tab-pane-3.tab-pane.fade
+								p We drill boreholes to provide clean water and reduce the colossal time spent on fetching water.
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project_en.html'" style="background-color:#0e8b8f;") more
+							.tab-pane-4.tab-pane.fade
+								p We support microfinance in rural areas through spreading technique of chicken raising and organic farming.
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project_en.html'" style="background-color:#0e8b8f;") more
+							.tab-pane-5.tab-pane.fade
+								p We provide volunteering opportunities for community service and cross-cultural exchange in Africa.
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project_en.html'" style="background-color:#0e8b8f;") more
+							.tab-pane-6.tab-pane.fade
+								p We train and send out missionaries to take the Gospel of Christ to the unreached people groups.
+								.btn.btn-md.text-white.px-4(onclick="location.href='side_project_en.html'" style="background-color:#0e8b8f;") more
+		section.bg-warning(style="overflow-x: hidden; clear:both;")
+			.container.py-5.text-center(data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true")
+				h2 Give towards the cause
+				h5.my-4 INTERNATIONAL BANK TRANSFER
+				h6 Bank Name : E.Sun Commercial Bank,Ltd., Taipei,Taiwan
+				h6 SWIFT Code : ESUNTWTP
+				h6 Origination Name : Step30 International Ministries
+				h6 Account # : 0587-441-030377
+
+
+		//- 匯入footer
+		include footer_en.pug
+		//- 匯入script
+		include script.pug

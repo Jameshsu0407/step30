@@ -1,0 +1,75 @@
+// 養雞農耕
+$color_bright_green: #86E027
+
+// ====================================================================================================
+// 共用部分
+// ====================================================================================================
+// 回到上方
+#go_to_top
+    background-color: $color_bright_green !important
+// footer
+footer
+    .icons
+        a
+            color: $color_bright_green !important
+            &:hover
+                img
+                    filter: invert(85%) sepia(48%) saturate(723%) hue-rotate(31deg) brightness(89%) contrast(96%) !important
+    .overlay
+        .vice_nav
+            .vice_nav_list
+                .list
+                    li
+                        a
+                            &:hover
+                                color: $color_bright_green !important
+// 上、下一步連結
+.page_link
+    .page_go_to
+        background-color: $color_bright_green
+        &:hover
+            background-color: darken($color_bright_green,10% )  
+.card
+    &:hover
+        .card-title
+            color: $color_bright_green !important
+        .more
+            a,i
+                color: $color_bright_green !important
+    .card-title
+        font-size: 1.2rem
+    .card-body
+        .date
+            color: $color_bright_green !important
+        nav
+            ol
+                li
+                    &:nth-last-child(1)
+                        color: $color_bright_green !important
+                    i
+                        color: $color_bright_green !important
+// 有濾鏡的視差
+.bg_parallax
+    .parallax__container
+        &::after
+            background-color: $color_bright_green !important
+// 查看更多
+.look_more
+    a
+        background-color: lighten( $color_bright_green ,10% ) !important
+        &:hover
+            background-color: $color_bright_green !important
+// ====================================================================================================
+
+
+// 卡片單一內容
+.card_info
+    span
+        color: $color_bright_green
+    nav
+        ol
+            li
+                &:nth-last-child(1)
+                    color: $color_bright_green
+                i
+                    color: $color_bright_green

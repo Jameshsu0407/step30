@@ -1,0 +1,74 @@
+// navbar
+nav.navbar.navbar-expand-lg.fixed-top.p-0
+    .container
+        a.navbar-brand.m-0(href="index.html")
+            img.img-fluid(src="../assets/img/logo-1.png" alt="")
+        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation")
+            i.fas.fa-bars
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+                li.nav-item.d-none.d-lg-flex.justify-content-lg-center.align-items-lg-center
+                    a.nav-link.nav_donate(href="fundraising.html")
+                        span 參與募資
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href="javascript:viod(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        | 動態消息
+                    .dropdown-menu.animate__animated.animate__fadeInDown.animate__faster
+                        a.dropdown-item(href="breaking_news.html") 最新消息
+                        a.dropdown-item(href="project_story.html") 計畫故事
+                        a.dropdown-item(href="volunteer_feedback.html") 志工心事
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href="javascript:viod(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        | 分項計畫
+                    .dropdown-menu.animate__animated.animate__fadeInDown.animate__faster
+                        a.dropdown-item(href="side_project.html") 舊鞋救命
+                        a.dropdown-item(href="side_project.html") 興學計畫
+                        a.dropdown-item(href="side_project.html") 活水計畫
+                        a.dropdown-item(href="side_project.html") 養雞農耕
+                        a.dropdown-item(href="side_project.html") 國際志工
+                        a.dropdown-item(href="#" target="_blank") MOVE宣教
+                li.nav-item
+                    a.nav-link(href="accomplished_map.html")
+                        | 執行地圖
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href="javascript:viod(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        | 支持我們
+                    .dropdown-menu.animate__animated.animate__fadeInDown.animate__faster
+                        a.dropdown-item(href="joinus.html") 成為志工
+                        a.dropdown-item(href="friends.html") 合作夥伴
+                        a.dropdown-item(href="sponsor.html") 天使贊助
+                        a.dropdown-item(href="material_donation.html") 物資捐贈說明
+                        a.dropdown-item(href="donation_place.html") 成為小型募集點
+                        a.dropdown-item(href="other_donate_methods.html") 其他捐款方式
+                li.nav-item.dropdown
+                    a#navbarDropdown.nav-link.dropdown-toggle(href="javascript:viod(0);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+                        | 關於我們
+                    .dropdown-menu.animate__animated.animate__fadeInDown.animate__faster
+                        a.dropdown-item(href="story.html") 故事緣起
+                        a.dropdown-item(href="history.html") 心路歷程
+                        a.dropdown-item(href="team.html") 執行團隊
+                        a.dropdown-item(href="funding_detail.html") 資金運用規則
+                        a.dropdown-item(href="credit.html") 勸募公開徵信
+                li.nav_icon
+                    ul
+                        li.nav-item
+                            a.nav-link(href="login.html" title="會員登錄")
+                                i.fas.fa-user.fa-fw
+                                span 您好，王小明
+                        li |
+                        li.nav-item
+                            a.nav-link(href="index_en.html" title="英文版")
+                                span EN
+                        li |
+                        li.nav-item
+                            a.nav-link(href="shopping_cart1.html" title="購物車" style="position: relative;")
+                                i.fas.fa-donate.fa-fw
+                                span.badge.badge-warning(style="position: absolute; top: 15px; right: -5px;") 3
+                        li |
+                        li.nav-item
+                            a.nav-link(href="https://www.facebook.com/step30.org/" title="facebook" target="_blank")
+                                i.fab.fa-facebook-square.fa-fw
+                        li |
+                        li.nav-item(title="line")
+                            a.nav-link(href="https://line.me/R/ti/p/%40fhk8334z" title="line" target="_blank")
+                                i.fab.fa-line.fa-fw

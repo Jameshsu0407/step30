@@ -1,0 +1,75 @@
+// Move宣教
+$color_dark_red: #8a0b16
+
+// ====================================================================================================
+// 共用部分
+// ====================================================================================================
+// 回到上方
+#go_to_top
+    background-color: $color_dark_red !important
+// footer
+footer
+    .icons
+        a
+            color: $color_dark_red !important
+            &:hover
+                img
+                    filter: invert(36%) sepia(49%) saturate(7036%) hue-rotate(338deg) brightness(54%) contrast(115%) !important
+    .overlay
+        .vice_nav
+            .vice_nav_list
+                .list
+                    li
+                        a
+                            &:hover
+                                color: $color_dark_red !important
+// 上、下一步連結
+.page_link
+    .page_go_to
+        background-color: $color_dark_red
+        &:hover
+            background-color: darken($color_dark_red,10% )  
+.card
+    &:hover
+        .card-title
+            color: $color_dark_red !important
+        .more
+            a,i
+                color: $color_dark_red !important
+    .card-title
+        font-size: 1.2rem
+    .card-body
+        .date
+            color: $color_dark_red !important
+        nav
+            ol
+                li
+                    &:nth-last-child(1)
+                        color: $color_dark_red !important
+                    i
+                        color: $color_dark_red !important
+// 有濾鏡的視差
+.bg_parallax
+    .parallax__container
+        &::after
+            background-color: $color_dark_red !important
+// 查看更多
+.look_more
+    a
+        background-color: lighten( $color_dark_red ,10% ) !important
+        &:hover
+            background-color: $color_dark_red !important
+// ====================================================================================================
+
+
+// 卡片單一內容
+.card_info
+    span
+        color: $color_dark_red
+    nav
+        ol
+            li
+                &:nth-last-child(1)
+                    color: $color_dark_red
+                i
+                    color: $color_dark_red

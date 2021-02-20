@@ -1,0 +1,136 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 常見問題
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/qa.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 常見問題
+		section
+			.container.my-5
+				.row
+					.col-12.col-lg-3
+						ul.credit_nav.mb-5.nav
+							li
+								a.active(data-toggle="tab" href="#qa1") 物資捐贈
+							li
+								a(data-toggle="tab" href="#qa2") 關於捐款
+							li
+								a(data-toggle="tab" href="#qa3") 關於志工
+							li
+								a(data-toggle="tab" href="#qa4") 關於網站
+							li
+								a(data-toggle="tab" href="#qa5") 網路言論
+					.col-12.col-lg-9
+						.tab-content
+							// qa1
+							#qa1.tab-pane.fade.show.active
+								.dropdown_animation
+									.wrap
+										a.title.collapsed(style="background-color: #fff;")
+											.grey_block
+												i.fas.fa-times.fa-fw.open
+											.text 現在還缺物資嗎？
+										.content
+											p 目前我們仍然需要物資，非洲仍有太多人沒有鞋子。我們執行其他計畫，幫助非洲貧民脫貧的同時，仍需要有物資確保他們的基本生存條件。
+									- for(var i=1 ; i<=4 ; i++)
+										.wrap
+											a.title.collapsed
+												.grey_block
+													i.fas.fa-times.fa-fw
+												.text 現在還缺物資嗎？
+											.content.collapse
+												p 目前我們仍然需要物資，非洲仍有太多人沒有鞋子。我們執行其他計畫，幫助非洲貧民脫貧的同時，仍需要有物資確保他們的基本生存條件。
+							// qa2
+							#qa2.tab-pane.fade.show
+								.dropdown_animation
+									.wrap
+										a.title.collapsed(style="background-color: #fff;")
+											.grey_block
+												i.fas.fa-times.fa-fw.open
+											.text 我想捐款贊助此活動，我該怎麼做？
+										.content
+											p 除了物資，將物資運送到非洲也需要資金，您可以選擇任何一個專案捐助，幫助非洲赤貧地區需要協助的朋友。
+									- for(var i=1 ; i<=4 ; i++)
+										.wrap
+											a.title.collapsed
+												.grey_block
+													i.fas.fa-times.fa-fw
+												.text 我想捐款贊助此活動，我該怎麼做？
+											.content.collapse
+												p 除了物資，將物資運送到非洲也需要資金，您可以選擇任何一個專案捐助，幫助非洲赤貧地區需要協助的朋友。
+							// qa3
+							#qa3.tab-pane.fade.show
+								.dropdown_animation
+									.wrap
+										a.title.collapsed(style="background-color: #fff;")
+											.grey_block
+												i.fas.fa-times.fa-fw.open
+											.text 有哪些志工需求？
+										.content
+											p ● 國內物資整理志工：至伯利恆倉庫將民眾的愛心物資分類及整理。
+									- for(var i=1 ; i<=4 ; i++)
+										.wrap
+											a.title.collapsed
+												.grey_block
+													i.fas.fa-times.fa-fw
+												.text 有哪些志工需求？
+											.content.collapse
+												p ● 國內物資整理志工：至伯利恆倉庫將民眾的愛心物資分類及整理。
+							// qa4
+							#qa4.tab-pane.fade.show
+								.dropdown_animation
+									.wrap
+										a.title.collapsed(style="background-color: #fff;")
+											.grey_block
+												i.fas.fa-times.fa-fw.open
+											.text 英文不好也可以報名參加嗎？
+										.content
+											p 目前服務國家肯亞及烏干達，除了當地使用之國家語言，英語亦是官方語言。服務期間因有許多行程需要以英文教學及分享，所以基本的英文溝通能力是需要的，當然我們的肢體語言也是個很棒的幫助，報名前一定要先評估過自己的狀況，若是害羞到連開口的勇氣都沒有，可能就要再考慮一下囉！
+									- for(var i=1 ; i<=4 ; i++)
+										.wrap
+											a.title.collapsed
+												.grey_block
+													i.fas.fa-times.fa-fw
+												.text 參與本計畫需要具備怎麼樣的特殊專長或能力? 或是建議怎麼樣的人參與本計畫？
+											.content.collapse
+												p 舊鞋救命國際志工團，初衷為希望帶更多的志工進入非洲，所以歡迎有各樣專長的朋友加入，與我們看見當地的需要，並且透過團隊合作，協助各計畫的進行，建立不一樣的情感和經歷，回國後也能與身邊的朋友分享。
+							// qa5
+							#qa5.tab-pane.fade.show
+								.dropdown_animation
+									.wrap
+										a.title.collapsed(style="background-color: #fff;")
+											.grey_block
+												i.fas.fa-times.fa-fw.open
+											.text 英文不好也可以報名參加嗎？
+										.content
+											p 目前服務國家肯亞及烏干達，除了當地使用之國家語言，英語亦是官方語言。服務期間因有許多行程需要以英文教學及分享，所以基本的英文溝通能力是需要的，當然我們的肢體語言也是個很棒的幫助，報名前一定要先評估過自己的狀況，若是害羞到連開口的勇氣都沒有，可能就要再考慮一下囉！
+									- for(var i=1 ; i<=4 ; i++)
+										.wrap
+											a.title.collapsed
+												.grey_block
+													i.fas.fa-times.fa-fw
+												.text 參與本計畫需要具備怎麼樣的特殊專長或能力? 或是建議怎麼樣的人參與本計畫？
+											.content.collapse
+												p 舊鞋救命國際志工團，初衷為希望帶更多的志工進入非洲，所以歡迎有各樣專長的朋友加入，與我們看見當地的需要，並且透過團隊合作，協助各計畫的進行，建立不一樣的情感和經歷，回國後也能與身邊的朋友分享。
+								
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

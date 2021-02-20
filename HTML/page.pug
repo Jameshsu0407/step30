@@ -1,0 +1,40 @@
+// 分頁
+#page
+    ul.pagination
+        li
+            a(href="#")
+                i.fa.fa-angle-double-left.fa-lg(aria-hidden="true")
+                span.sr-only 第一頁
+        li
+            a(href="#")
+                i.fa.fa-angle-left.fa-lg(aria-hidden="true")
+                span.sr-only 上一頁
+        // 使用者輸入
+        // <li><a><input type="text" placeholder="" size="1">&nbsp;&nbsp;<span>/&nbsp;&nbsp;15</span></a></li>
+        // select
+        li
+            select.select_css(onchange="location.href=this.options[this.selectedIndex].value")
+                option(selected="selected" value="#") 1
+                option(value="#") 2
+                option(value="#") 3
+                option(value="#") 4
+                option(value="#") 5
+                option(value="#") 6
+                option(value="#") 7
+                option(value="#") 8
+                option(value="#") 9
+                option(value="#") 10
+                option(value="#") 11
+                option(value="#") 12
+                option(value="#") 13
+                option(value="#") 14
+                option(value="#") 15
+            span /  15
+        li
+            a(href="#")
+                i.fa.fa-angle-right.fa-lg(aria-hidden="true")
+                span.sr-only 下一頁
+        li
+            a(href="#")
+                i.fa.fa-angle-double-right.fa-lg(aria-hidden="true")
+                span.sr-only 最後一頁

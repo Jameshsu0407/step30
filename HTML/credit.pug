@@ -1,0 +1,94 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 勸募公開徵信
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/credit.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 勸募公開徵信
+		section
+			.container.my-5
+				.row
+					.col-12.col-lg-3
+						ul.credit_nav.mb-5.nav
+							li.title
+								h4 舊鞋救命
+							li
+								a.active(data-toggle="tab" href="#credit1") 公開徵信
+							.my-5
+							li.title
+								h4 2019
+							li
+								a(data-toggle="tab" href="#credit2") 年度財報與捐贈紀錄
+							li
+								a(data-toggle="tab" href="#credit3") 勸募
+					.col-12.col-lg-9
+						.tab-content
+							// credit1
+							#credit1.tab-pane.fade.show.active
+								ul.nav.nav-tabs.mb-3
+									li.nav-item
+										a.nav-link.text-white.active(data-toggle="tab" href="#credit1-1") 公開徵信
+								.tab-content
+									#credit1-1.tab-pane.fade.show.active
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.		
+							// credit2
+							#credit2.tab-pane.fade
+								ul.nav.nav-tabs.mb-3
+									li.nav-item
+										a.nav-link.text-white.active(data-toggle="tab" href="#credit2-1") 2019年度捐款者名冊
+									li.nav-item
+										a.nav-link.text-white(data-toggle="tab" href="#credit2-2") 2019年度財務報告
+									li.nav-item
+										a.nav-link.text-white(data-toggle="tab" href="#credit2-3") 2019年度報告暨2020年度計畫
+								.tab-content
+									#credit2-1.tab-pane.fade.show.active
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.
+									#credit2-2.tab-pane.fade
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.
+									#credit2-3.tab-pane.fade
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.
+							// credit3
+							#credit3.tab-pane.fade
+								ul.nav.nav-tabs.mb-3
+									li.nav-item
+										a.nav-link.text-white.active(data-toggle="tab" href="#credit3-1") 108勸募（第四期）支用明細
+									li.nav-item
+										a.nav-link.text-white(data-toggle="tab" href="#credit3-2") 108勸募（第四期）損益表
+									li.nav-item
+										a.nav-link.text-white(data-toggle="tab" href="#credit3-3") 108勸募（第四期）捐款者名單
+								.tab-content
+									#credit3-1.tab-pane.fade.show.active
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.
+									#credit3-2.tab-pane.fade
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.
+									#credit3-3.tab-pane.fade
+										// 這裡放檔案
+										p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae illo ad quas assumenda numquam suscipit ex blanditiis cumque sequi, eos illum eius sint iusto in omnis velit, harum tempora odit.
+								
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

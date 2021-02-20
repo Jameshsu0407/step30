@@ -1,0 +1,70 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title project
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入navbar
+		include navbar_en.pug
+
+		// banner
+		section
+			.jumbotron.top_cover.mb-0(style="background-image: url(../assets/img/en_project1.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container(style="overflow-x: hidden; clear:both;")
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="500") STEP30
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1000") INTERNATIONAL
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="1500") MINISTRIES
+					h2(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true" data-aos-delay="2000") LIVING WATER
+		section
+			.container.my-5(style="overflow-x: hidden; clear:both;")
+				h2.color_blue.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") LIVING WATER
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") Water is essential for living. The accessibility to clean water determines the health, living conditions, education, and productivity of a community.
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="1000") Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod reiciendis atque error provident magnam quibusdam ducimus recusandae cumque culpa officia? Non voluptatibus animi error atque nihil quas in aspernatur aut.
+		// bg_parallax
+		section
+			.bg_parallax.story
+				.content
+					.container
+						.row
+							.col-12.col-md-8.my-5(style="overflow-x: hidden; clear:both;")
+								h2.color_blue.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") PROBLEM
+								p.text-white(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") Nevertheless, almost half of the people drinking water from unprotected sources live in Sub-Saharan Africa. Also, the burden of fetching water lies mainly on women and children. The long distance to water sources not only compresses the time for women to do housework production but also deprives children of education.
+								p.text-white(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, illum officia. Perferendis eaque ipsum dolorum fuga distinctio vel, ab iste dicta nulla. Vero iure eos velit aspernatur fugiat dolore sapiente?
+							.col-12.col-md-4.my-5.d-flex.justify-content-center.align-items-center(style="overflow-x: hidden; clear:both;")
+								img.img-fluid(src="../assets/img/story01.jpg", alt="" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true")
+
+				.parallax(style="background-image: url(../assets/img/story01_bg.jpg); background-size: cover;")
+		section
+			.container.my-5
+				.row
+					.col-12.col-md-4.order-2.order-md-1.d-flex.justify-content-center.align-items-center(style="overflow-x: hidden; clear:both;")
+						img.img-fluid(src="../assets/img/story02.jpg", alt="" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true")
+					.col-12.col-md-8.order-1.order-md-2(style="overflow-x: hidden; clear:both;")
+						h2.color_blue.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") WHAT WE DO?
+						p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") Living Water drills boreholes in rural East Africa to provide safe, accessible water, improve health and living conditions, and lay the foundation for community development. The well not only brings clean water but also hopes to a whole community.
+		// bg_parallax
+		section
+			.bg_parallax.story
+				.content
+					.container
+						.row
+							.col-12.col-md-8.my-5(style="overflow-x: hidden; clear:both;")
+								h2.color_blue.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") RESULT
+								p.text-white(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem aspernatur, nulla eligendi deleniti ipsa ipsum unde aperiam, aut, exercitationem quos amet optio tempora sunt sed vel quae distinctio illo natus?
+							.col-12.col-md-4.my-5.d-flex.justify-content-center.align-items-center(style="overflow-x: hidden; clear:both;")
+								img.img-fluid(src="../assets/img/story03.jpg", alt="" data-aos="zoom-in" data-aos-duration="1500" data-aos-once="true")
+				.parallax(style="background-image: url(../assets/img/story03_bg.jpg); background-size: cover;")
+		section
+			.container.text-center.my-5(style="overflow-x: hidden; clear:both;")
+				h2.color_blue.mb-4(data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true") LIVING WATER
+				p(data-aos="zoom-out" data-aos-duration="1500" data-aos-once="true") Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium tempore omnis nisi pariatur ad illum sed cum deserunt eligendi rem dolorum voluptatum, molestias eius odit, ratione tenetur, laudantium consequatur repellendus.
+		
+	//- 匯入footer
+	include footer_en.pug
+	//- 匯入script
+	include script.pug

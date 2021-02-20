@@ -1,0 +1,160 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 志工心事
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/breaking_news_cover.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 志工心事
+		// selector
+		section
+			.container.my-5
+				#selector_nav.d-flex.flex-wrap.justify-content-center.align-content-center
+					button.active 舊鞋救命
+					button 興學計畫
+					button 活水計畫
+					button 養雞農耕
+					button 國際志工
+					button Move宣教
+				#selector_content.my-3
+					.card.p-0
+						a(href="card_info.html")
+							img.card-img-top(src="../assets/img/card1.png" alt="Card image cap")
+							.card-body
+								.date.color_brown
+									span.d-block.day 28
+									span.d-block SEP
+									span.d-block 2020
+								h6.card-title.text-truncate 他不是我弟弟
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_brown
+										li.breadcrumb-item 計畫
+										li.breadcrumb-item.color_brown 舊鞋救命
+									p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 了解詳情
+					.card.p-0
+						a(href="card_info.html")
+							img.card-img-top(src="../assets/img/card1.png" alt="Card image cap")
+							.card-body
+								.date.color_green
+									span.d-block.day 28
+									span.d-block SEP
+									span.d-block 2020
+								h6.card-title.text-truncate 他不是我弟弟
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_green
+										li.breadcrumb-item 計畫
+										li.breadcrumb-item.color_green 興學計畫
+									p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 了解詳情
+					.card.p-0
+						a(href="card_info.html")
+							img.card-img-top(src="../assets/img/card1.png" alt="Card image cap")
+							.card-body
+								.date.color_blue
+									span.d-block.day 28
+									span.d-block SEP
+									span.d-block 2020
+								h6.card-title.text-truncate 他不是我弟弟
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_blue
+										li.breadcrumb-item 計畫
+										li.breadcrumb-item.color_blue 活水計畫
+									p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 了解詳情
+					.card.p-0
+						img.card-img-top(src="../assets/img/card1.png" alt="Card image cap")
+						.card-body
+							.date.color_bright_green
+								span.d-block.day 28
+								span.d-block SEP
+								span.d-block 2020
+							h6.card-title.text-truncate 他不是我弟弟
+							nav
+								ol.breadcrumb.p-0
+									li
+										i.fas.fa-bullhorn.fa-fw.mr-2.color_bright_green
+									li.breadcrumb-item 計畫
+									li.breadcrumb-item.color_bright_green 養雞農耕
+								p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+							.more.mt-3
+								.text-secondary
+									i.fas.fa-plus.fa-fw.mr-2
+									| 了解詳情
+					.card.p-0
+						a(href="card_info.html")
+							img.card-img-top(src="../assets/img/card1.png" alt="Card image cap")
+							.card-body
+								.date.color_red
+									span.d-block.day 28
+									span.d-block SEP
+									span.d-block 2020
+								h6.card-title.text-truncate 他不是我弟弟
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_red
+										li.breadcrumb-item 計畫
+										li.breadcrumb-item.color_red 國際志工
+									p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+								.more.mt-3
+									.text-secondary
+										i.fas.fa-plus.fa-fw.mr-2
+										| 了解詳情
+					.card.p-0
+						a(href="card_info.html")
+							img.card-img-top(src="../assets/img/card1.png" alt="Card image cap")
+							.card-body
+								.date.color_dark_red
+									span.d-block.day 28
+									span.d-block SEP
+									span.d-block 2020
+								h6.card-title.text-truncate 他不是我弟弟
+								nav
+									ol.breadcrumb.p-0
+										li
+											i.fas.fa-bullhorn.fa-fw.mr-2.color_dark_red
+										li.breadcrumb-item 計畫
+										li.breadcrumb-item.color_dark_red MOVE宣教
+									p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+								.more.mt-3
+									.text-secondar
+										i.fas.fa-plus.fa-fw.mr-2
+										| 了解詳情					 
+				include page.pug
+
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

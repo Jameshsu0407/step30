@@ -1,0 +1,260 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 會員專區
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/card_info_top_cover.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 會員專區
+		section
+			.container.container_fix.my-5
+				.row
+					.col-12.col-lg-2
+						ul.foreign_volunteer_nav.mb-5.nav.sticky-top(style="top: 100px;")
+							li 
+								a.active(data-toggle="tab" href="#member_pane1") 個人資料維護
+							li
+								a(data-toggle="tab" href="#member_pane2") 修改密碼
+							li 
+								a(data-toggle="tab" href="#member_pane3") 捐款紀錄
+							li 
+								a(data-toggle="tab" href="#member_pane4") 公益商品
+							li 
+								a(data-toggle="tab" href="#member_pane5") 國內志工
+							li 
+								a(data-toggle="tab" href="#member_pane6") 國際志工
+							.d-flex.justify-content-center.align-items-center.mt-5
+								a.btn.text-white.px-4( style="background-color:#0e8b8f" href="login.html") 登出
+					.col-12.col-lg-10
+						form
+							.tab-content
+								// 個人資料維護內容
+								#member_pane1.tab-pane.fade.show.active
+									.title_section.text-center.mb-3
+										img(src="../assets/img/ttl-bar.png" alt="")
+										h2 個人資料維護
+									.d-flex.justify-content-center.align-items-center.flex-column.my-3
+										.profile.mb-4
+											.rounded-circle
+												img#resize_pic.img-fluid(src="../assets/img/default_picture.png", alt="")
+											.upload_icon
+												label.btn(for="file_hidden_btn")
+													i.fas.fa-camera.fa-fw
+												input#file_hidden_btn(type="file"  accept="image/*" style="display:none")
+												
+										input#zoom_bar(type="range" min="1" max="5" value="1" step="0.1" oninput="pic_resize()")
+									.row.write_info
+										.form-group.col-12
+											label(for="account") 帳號
+											input#account.form-control(type="text" placeholder="1234567890@gmail.com" readonly)
+										.form-group.col-12.col-md-6
+											label(for="name") 姓名
+											input#name.form-control(type="text" placeholder="")
+										.form-group.col-12.col-md-6
+											label(for="nickname") 暱稱
+											input#nickname.form-control(type="text" placeholder="")
+										.form-group.col-12.col-md-6
+											label(for="fb_id") Facebook ID
+											input#fb_id.form-control(type="text" placeholder="1234567890" readonly)
+										.form-group.col-12.col-md-6
+											label(for="google_id") Google ID
+											input#google_id.form-control(type="text" placeholder="1234567890" readonly)
+										.form-group.col-12.col-md-6
+											label.required(for="gender") 性別
+											.gender.d-flex.flex-wrap.mt-2
+												.form-check.mr-3
+													input#male.form-check-input(type="radio" name="gender" value="male")
+													label.form-check-label(for="male") 男性
+												.form-check
+													input#female.form-check-input(type="radio" name="gender" value="female")
+													label.form-check-label(for="female") 女性
+										.form-group.col-12.col-md-6
+											label(for="birth") 生日
+											input#birth.form-control(type="date" placeholder="")
+										.form-group.col-12.col-md-6
+											label(for="phone") 手機號碼
+											input#phone.form-control(type="tel" placeholder="")
+										.form-group.col-12.col-md-6
+											label(for="email") 電子郵件
+											input#email.form-control(type="email" placeholder="")
+										.form-group.col-12
+											label(for="address") 現居地址
+											.address
+												label.sr-only(for="address_district_number") 
+												input#address_district_number.form-control(type="number" placeholder="郵遞區號")
+
+												select.form-control.city
+													option(value="#" disabled selected) 請選擇縣市
+													option(value="#") 台北市
+													option(value="#") 新北市
+													option(value="#") 桃園市
+													option(value="#") 我都行
+												select.form-control.district
+													option(value="#" disabled selected) 鄉鎮市區
+													option(value="#") 中山區
+													option(value="#") 中正區
+													option(value="#") 信義區
+												label.sr-only(for="domestic_address_detail") 國內地址
+												input#domestic_address_detail.form-control(type="text" placeholder="地址")
+											.d-flex.justify-content-center.align-items-center.mt-5
+												a.btn.text-white.px-4( style="background-color:#0e8b8f" href="") 確定修改
+								// 修改密碼內容
+								#member_pane2.tab-pane.fade(style="max-width: 400px; margin: 0 auto;")
+									.title_section.text-center.mb-3
+										img(src="../assets/img/ttl-bar.png" alt="")
+										h2 修改密碼
+									.form-group
+										label 請輸入舊密碼
+										input#old_password.form-control(type="password")
+									.form-group
+										label 請輸入密碼
+										input#password.form-control(type="password")
+									.form-group
+										label 密碼確認
+										input#password_check.form-control(type="password")
+									.form-group
+										label 驗證碼
+										.input-group
+											input.form-control(type="text" placeholder="驗證碼" style="max-width: 250px")
+											.input-group-append
+												img.img-fluid(src="../assets/img/validation.png", alt="")
+									.d-flex.justify-content-center.align-items-center.mt-5
+										button.btn.text-white.px-4( style="background-color:#0e8b8f") 送出
+								// 捐款紀錄內容
+								#member_pane3.tab-pane.fade
+									.title_section.text-center.mb-3
+										img(src="../assets/img/ttl-bar.png" alt="")
+										h2 捐款紀錄
+									table.table.table-striped
+										thead
+											tr
+												th(scope="col") 捐款日期
+												th(scope="col") 分項計畫
+												th(scope="col") 項目名稱
+												th(scope="col") 捐款金額
+												th(scope="col") 捐款方式
+												th(scope="col") 轉帳帳號
+												th(scope="col") 捐款訊息
+												th(scope="col") 詳細資料
+										tbody
+											- for ( var i=1 ; i<=4 ; i++)
+												tr
+													td(data-th="捐款日期") 2021/01/01
+													td(data-th="分項計畫") 活水計畫
+													td(data-th="項目名稱") 2020 新冠疫情 – 非洲緊急援助
+													td(data-th="捐款金額") 1000元
+													td(data-th="捐款方式") 定期定額
+													td(data-th="轉帳帳號") 1234567890
+													td(data-th="捐款訊息") 捐給有需要的人
+													td(data-th="詳細資料") 無
+										tfoot
+											tr.no_data
+												td.text-center.no_data_column(colspan="8") 查無資料！
+									include page.pug
+									.d-flex.justify-content-center.align-items-center.mt-5
+										a.btn.text-white.px-4( style="background-color:#0e8b8f" href="fundraising.html") 立即捐款
+								// 公益商品內容
+								#member_pane4.tab-pane.fade
+									.title_section.text-center.mb-3
+										img(src="../assets/img/ttl-bar.png" alt="")
+										h2 公益商品
+									table.table.table-striped
+										thead
+											tr
+												th(scope="col" style="width:15%") 訂單編號
+												th(scope="col" style="width:12%") 總金額
+												th(scope="col" style="width:12%") 付款方式
+												th(scope="col") 轉帳帳號
+												th(scope="col") 付款日期
+												th(scope="col" style="width:12%") 付款訊息
+												th(scope="col" style="width:12%") 詳細資料
+										tbody
+											- for ( var i=1 ; i<=4 ; i++)
+												tr
+													td(data-th="訂單編號") 1234567890
+													td(data-th="總金額") 1000元
+													td(data-th="付款方式") 線上刷卡
+													td(data-th="轉帳帳號") 886827398390
+													td(data-th="付款日期") 2021/01/01
+													td(data-th="付款訊息") 無
+													td(data-th="詳細資料") 無
+										tfoot
+											tr.no_data
+												td.text-center.no_data_column(colspan="7") 查無資料！
+									include page.pug
+									.d-flex.justify-content-center.align-items-center.mt-5
+										a.btn.text-white.px-4( style="background-color:#0e8b8f" href="#") 公益商品
+								// 國內志工內容
+								#member_pane5.tab-pane.fade
+									.title_section.text-center.mb-3
+										img(src="../assets/img/ttl-bar.png" alt="")
+										h2 國內志工
+									table.table.table-striped
+										thead
+											tr
+												th(scope="col" style="width:15%") 編號
+												th(scope="col" style="width:15%") 類別名稱
+												th(scope="col") 單次活動可配合時間
+												th(scope="col" style="width:15%") 登記日期
+												th(scope="col" style="width:15%") 狀態
+										tbody
+											- for ( var i=1 ; i<=4 ; i++)
+												tr
+													td(data-th="編號") 19230456
+													td(data-th="類別名稱") 物資整理
+													td(data-th="單次活動可配合時間") 2020/07/01 ~ 2020/07/31
+													td(data-th="登記日期") 2020/01/01
+													td(data-th="狀態") 準備出發
+										tfoot
+											tr.no_data
+												td.text-center.no_data_column(colspan="5") 查無資料！
+									include page.pug
+									.d-flex.justify-content-center.align-items-center.mt-5
+										a.btn.text-white.px-4( style="background-color:#0e8b8f" href="domestic_volunteer.html") 成為國內志工
+								// 國際志工內容
+								#member_pane6.tab-pane.fade
+									.title_section.text-center.mb-3
+										img(src="../assets/img/ttl-bar.png" alt="")
+										h2 國際志工
+									table.table.table-striped
+										thead
+											tr
+												th(scope="col" style="width:20%") 編號
+												th(scope="col" style="width:20%") 類別名稱
+												th(scope="col") 活動名稱
+												th(scope="col" style="width:15%") 登記日期
+												th(scope="col" style="width:15%") 狀態
+										tbody
+											- for ( var i=1 ; i<=4 ; i++)
+												tr
+													td(data-th="編號") 19230456
+													td(data-th="類別名稱") 舊鞋救命團
+													td(data-th="活動名稱") 7月肯亞舊鞋救命團
+													td(data-th="登記日期") 2020/01/01
+													td(data-th="狀態") 準備出發
+										tfoot
+											tr.no_data
+												td.text-center.no_data_column(colspan="5") 查無資料！
+									include page.pug
+									.d-flex.justify-content-center.align-items-center.mt-5
+										a.btn.text-white.px-4( style="background-color:#0e8b8f" href="foreign_volunteer.html") 成為國際志工
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

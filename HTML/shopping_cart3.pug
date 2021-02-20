@@ -1,0 +1,114 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 3 選擇/確認捐款方式
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/card_info_top_cover.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 購物車
+		// progress_bar
+		section
+			.container
+				.progress_bar.my-5
+					ul
+						li
+							.wrap
+							h5 1 捐款明細
+						li
+							.wrap
+							h5 2 填寫捐款人資料
+						li.active
+							.wrap
+							h5 3 選擇/確認捐款方式
+						li
+							.wrap
+							h5 4 交易完成
+		// form
+		section
+			.container
+				form
+					label.form_title
+						i.fas.fa-heart
+						| 單筆捐款
+					table.table.table-striped.mb-5
+						thead
+							tr.text-center
+								th.text-left(scope="col" style="width: 25%") 募資專案
+								th.text-left(scope="col" style="width: 45%") 募資項目
+								th.text-center(scope="col" style="width: 15%") 捐款方式
+								th.text-center(scope="col" style="width: 15%") 捐款金額
+						tbody
+							- for ( var i=1 ; i<=4 ; i++)
+								tr.text-center
+									td.text-left(data-th="募資專案") 2020活水計畫
+									td.text-left(data-th="募資項目") NT500 ->幫助一名非洲孩子有乾淨的水喝
+									td(data-th="捐款方式") 單次捐款
+									td(data-th="捐款金額") 1000
+							tr.text-center
+									td.text-left(data-th="募資專案") 2020活水計畫
+									td.text-left(data-th="募資項目") NaN
+									td(data-th="捐款方式") 單次捐款
+									td(data-th="捐款金額") 1000
+					label.form_title
+						i.fas.fa-heart
+						| 定期定額
+					table.table.table-striped
+						thead
+							tr.text-center
+								th.text-left(scope="col" style="width: 25%") 募資專案
+								th.text-left(scope="col" style="width: 45%") 募資項目
+								th.text-center(scope="col" style="width: 15%") 捐款方式
+								th.text-center(scope="col" style="width: 15%") 捐款金額
+						tbody
+							- for ( var i=1 ; i<=3 ; i++)
+								tr.text-center
+									td.text-left(data-th="募資專案") 2020活水計畫
+									td.text-left(data-th="募資項目") NT500 ->幫助一名非洲孩子有乾淨的水喝
+									td(data-th="捐款方式") 定期定額
+									td(data-th="捐款金額") 1000
+							tr.text-center
+									td.text-left(data-th="募資專案") 2020活水計畫
+									td.text-left(data-th="募資項目") NaN
+									td(data-th="捐款方式") 單次捐款
+									td(data-th="捐款金額") 1000
+					.sum_cost.p-2.mb-5
+						h6.text-right.text-white.m-0 總金額：7000元
+					label.form_title
+						i.fas.fa-heart
+						| 捐款方式
+					.form-group
+						.form-check.form-check-inline
+							input#credit_card.form-check-input(type="radio" name="payment" value="credit_card")
+							label.form-check-label(for="credit_card") 信用卡
+						.form-check.form-check-inline
+							input#convenience.form-check-input(type="radio" name="payment" value="convenience")
+							label.form-check-label(for="convenience") 超商條碼
+						.form-check.form-check-inline
+							input#ATM.form-check-input(type="radio" name="payment" value="ATM")
+							label.form-check-label(for="ATM") ATM轉帳(虛擬帳號付款)
+						.form-check.form-check-inline
+							input#Linepay.form-check-input(type="radio" name="payment" value="Linepay")
+							label.form-check-label(for="Linepay") Linepay						
+					.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+						a.btn.btn-md.btn-secondary.m-1.text-white(href="shopping_cart2.html")
+							i.fas.fa-angle-double-left.fa-fw.mr-1
+							| 上一步
+						a.btn.btn-md.page_go_to.m-1.text-white(href="shopping_cart4.html") 
+							| 下一步
+							i.fas.fa-angle-double-right.fa-fw.ml-1
+		//- 匯入footer
+		include footer.pug
+		//- 匯入script
+		include script.pug
+		

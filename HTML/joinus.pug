@@ -1,0 +1,105 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 成為志工
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/joinus.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 成為志工
+		section
+			.container.my-5
+				.d-flex.flex-column.align-items-center.text-center
+					img.img-fluid.my-3(src="../assets/img/ttl-bar.png", alt="")
+					h6.mb-5 這世界上最貧苦艱困的地方，總是能看見嶄露笑容的孩童玩耍，玩著自己發明的小遊戲、玩著垃圾袋製作的足球。從給予一雙舊鞋開始，我們為這些孩子禱告，分享祝福，也邀請你參與這個夢想。
+					.row
+						.col-12.col-lg-6
+							h5 國內志工
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 物資整理
+									p.card-text 在《舊鞋‧救命》位於輔大後門的倉庫，每天都有來自各界的愛心物資蜂擁而至，面對日漸增大的人力需求，我們期盼有您加入我們的行列！
+									.more.text-right
+										a.text-secondary(href="domestic_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 線上客服
+									p.card-text 協助回覆《舊鞋救命》Facebook官方粉絲團的問答與私訊、官方Line的問答。
+									.more.text-right
+										a.text-secondary(href="domestic_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 分享志工
+									p.card-text 於募集、活動或講座上介紹《舊鞋救命》各項計畫、非洲出團經驗分享。
+									.more.text-right
+										a.text-secondary(href="domestic_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 多媒體志工
+									p.card-text 鮮明易懂的文宣、攝影、影片，能夠幫助更多人認識《舊鞋‧救命》，並看見非洲居民的需要，期待您的參與，一起用專業述說非洲的故事。
+									.more.text-right
+										a.text-secondary(href="domestic_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 翻譯志工
+									p.card-text 跨越國界的服務，少不了更多元的溝通，期待透過您的語言能力，讓世界更加了解這個使命，一同參與《舊鞋‧救命》，為非洲的居民出一份力！
+									.more.text-right
+										a.text-secondary(href="domestic_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 活動執行
+									p.card-text 除了非洲端的服務，國內的推廣活動也非常重要，歡迎一起加入活動執行團隊，將美好的理念推廣給更多人。
+									.more.text-right
+										a.text-secondary(href="domestic_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+						.col-12.col-lg-6
+							h5 國際志工
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 舊鞋救命團
+									p.card-text 認同舊鞋救命成立宗旨，且不排斥基督信仰。有清沙蚤之行程需全程協助配合，評估個人身體狀況可接受後再報名。
+									p.card-text 國際志工將會跟著舊鞋救命一同前往非洲需要救助的地區，您將需自行支付大部分的團費，但我們會提供給您所有行前，當地執行公益的知識與資源。
+									.more.text-right
+										a.text-secondary(href="foreign_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+							.card.joinus_card.p-0.my-4(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								.card-body
+									h6.card-title.text-truncate 宣教團
+									p.card-text 基督徒為優先，但如果對基督信仰沒有排斥，或是非常有興趣，希望對此信仰有更多認識，也歡迎報名參加。
+									p.card-text 國際志工將會跟著舊鞋救命一同前往非洲需要救助的地區，您將需自行支付大部分的團費，但我們會提供給您所有行前，當地執行公益的知識與資源。
+									.more.text-right
+										a.text-secondary(href="foreign_volunteer.html")
+											| GO
+											i.fas.fa-arrow-right.fa-fw.ml-1
+	
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

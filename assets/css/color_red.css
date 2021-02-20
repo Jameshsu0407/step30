@@ -1,0 +1,71 @@
+#go_to_top {
+  background-color: #EE2C2C !important;
+}
+
+footer .icons a {
+  color: #EE2C2C !important;
+}
+
+footer .icons a:hover img {
+  filter: invert(20%) sepia(64%) saturate(6170%) hue-rotate(352deg) brightness(111%) contrast(86%) !important;
+}
+
+footer .overlay .vice_nav .vice_nav_list .list li a:hover {
+  color: #EE2C2C !important;
+}
+
+.page_link .page_go_to {
+  background-color: #EE2C2C;
+}
+
+.page_link .page_go_to:hover {
+  background-color: #d61111;
+}
+
+.card:hover .card-title {
+  color: #EE2C2C !important;
+}
+
+.card:hover .more a, .card:hover .more i {
+  color: #EE2C2C !important;
+}
+
+.card .card-title {
+  font-size: 1.2rem;
+}
+
+.card .card-body .date {
+  color: #EE2C2C !important;
+}
+
+.card .card-body nav ol li:nth-last-child(1) {
+  color: #EE2C2C !important;
+}
+
+.card .card-body nav ol li i {
+  color: #EE2C2C !important;
+}
+
+.bg_parallax .parallax__container::after {
+  background-color: #EE2C2C !important;
+}
+
+.look_more a {
+  background-color: #f25b5b !important;
+}
+
+.look_more a:hover {
+  background-color: #EE2C2C !important;
+}
+
+.card_info span {
+  color: #EE2C2C;
+}
+
+.card_info nav ol li:nth-last-child(1) {
+  color: #EE2C2C;
+}
+
+.card_info nav ol li i {
+  color: #EE2C2C;
+}

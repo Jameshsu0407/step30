@@ -1,0 +1,54 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 隱私權政策
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/terms.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 隱私權政策
+		section
+			.container.my-5
+				p 舊鞋救命國際基督關懷協會尊重個人隱私權的承諾，為了讓您能夠安心使用「Step30舊鞋救命」各項服務與資訊，特此向您說明隱私權保護政策，以保障您的權益，請詳閱下列內容：
+				h6(style="color:#0e8b8f;") 一、收集個人資料聲明
+				ol
+					li 我們尊重個人私隱，承諾將會履行保護個人私隱原則，並會遵從「中華民國個人資料保護法」內之有關規訂。
+					li 當您使用本站會員服務時，即表示您同意並願遵守本會員服務條款的規定事項及相關法律之規定。本網站中各式頁面或本會文宣品可能邀請用戶提供部分個人資料(如：姓名、地址、電話、電子信箱等個人資料)，但這些並非強制要求提供的資料，您可以選擇不填寫任何個人資料。如果您沒有填寫時，就以下本會第三點所提供的訊息，您將不會收到。
+					li 本協會保留有審核加入會員資格之權利；已加入會員者，本協會亦保留有解除其會員資格之權利。收集及保存個人資料之目的：我們可能利用您提供的聯絡資料，寄送本會相關文宣給您，或者必須時，本會也可能直接與您聯繫。若您不希望接收更多文宣訊息，您可提出不希望接收文宣的申請。
+					li 本會保證所有收集的個人資料都會保密：我們絕不會租賃、出售或交換我們的個資名單，也不會將其提供給第三方，除非是在法律規範下或依法令所為之查詢，或在考量因避免嚴重傷害的情況下，主動配合檢調單位或其他政府機關提供所需資料。
+					li 如您是未滿二十歲之未成年人：您必須在加入會員前，將本服務條款及其後之修改變更請您的父母或監護人閱讀，並得到其同意，才可以註冊及繼續使用本服務。當您使用本服務時，則視為您的父母或監護人已經閱讀、了解並同意本服務條款之內容及其後之修改變更。
+					li 查閱並更正個人資料等權益：您有權向本會提出查閱及更改本會所保存有關您的個人資料，也可以請求製給複製本、停止收集處理與利用、或刪除。如有要求，請與本會連絡。
+				h6(style="color:#0e8b8f;") 二、網站使用聲明
+				ol
+					li 本會使用「Google Analytics」蒐集數據資訊和瀏覽本會網站的流量。
+						a(href="https://policies.google.com/privacy?hl=zh-twl" style="color:#0e8b8f;" target="_blank") Google隱私權政策
+						| 為「Google」公司所管理，該企業之隱私權保護政策可上其官網查詢。
+					li 透過這些工具蒐集的數據並不包含可用來指認出個人的資料。
+					li 這些數據的用途為加強網站的功能性，服務造訪本網站的訪客。
+					li 本網站可能含有其他網站的連結，例如：合作夥伴、贊助單位。連結到的外部網站可能頁面上出現「Step30舊鞋救命」的logo，但本會並不為這些外部網站的內容或其隱私權保護政策負責。
+					li 我們將盡力以合理之技術及程序，保障所有個人資料之安全。
+					li 請妥善維護您的會員帳號、密碼或任何個人資料。 請留意無論何時您透過網站討論區、電子郵件、或聊天室等公開區域所主動揭露的個人資料，均可能被其他第三人蒐集或使用，上網時請特別小心。
+					li 當您使用本網站所提供的服務時，「Step30舊鞋救命」將視同您已閱讀、且同意本政策。本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將公告於網站上，請隨時查詢最新公告內容。
+					li 如果您不同意本政策，請立即停止使用本網站服務。			
+				.d-flex.justify-content-center.align-items-center.mt-5
+					a.btn.text-white.px-4(href="index.html" style="background-color:#0e8b8f") 回首頁
+
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

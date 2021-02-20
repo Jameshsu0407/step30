@@ -1,0 +1,329 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 報名國際志工
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/foreign_volunteer.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 國際志工
+		section
+			.container.my-5
+				form
+					.row
+						.col-12.col-lg-3
+							ul.foreign_volunteer_nav.mb-5.nav.sticky-top(style="top: 100px;")
+								li.add_icon 
+									a.choose_pane.active(href="#pane1") 個人基本資料
+									i.fas.fa-check.text-success.fa-fw
+								li.add_icon 
+									a.choose_pane(href="#pane2") 生活現況
+									i.fas.fa-times.text-danger.fa-fw
+								li.add_icon 
+									a.choose_pane(href="#pane3") 保險與醫療
+									i.fas.fa-times.text-danger.fa-fw
+								li.add_icon 
+									a.choose_pane(href="#pane4") 進階問題
+									i.fas.fa-times.text-danger.fa-fw
+						.col-12.col-lg-9
+							.tab-content
+								// 個人基本資料內容
+								#pane1.tab-pane.fade.show.active.write_info
+									.row
+										.col-12.col-md-6
+											.form-group
+												label.required(for="name") 中文姓名
+												input#name.form-control(type="text")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="passport_id") 護照英文姓名
+												input#passport_id.form-control(type="text" placeholder="請務必與護照英文姓名拼音相同填寫格式")
+										.col-12.col-md-6
+											.form-group
+												label(for="ID") 身分證字號
+												input#ID.form-control(type="number")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="gender") 性別
+												.gender.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#male.form-check-input(type="radio" name="gender" value="male")
+														label.form-check-label(for="male") 男性
+													.form-check
+														input#female.form-check-input(type="radio" name="gender" value="female")
+														label.form-check-label(for="female") 女性
+										.col-12.col-md-6
+											.form-group
+												label.required(for="birth") 生日
+												input#birth.form-control(type="date")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="phone") 聯絡電話
+												input#phone.form-control(type="tel")
+										.col-12
+											.form-group
+												label.required(for="email") 電子信箱
+												input#email.form-control(type="email")
+										.col-12
+											.form-group
+												label.required(for="address") 現居地址
+												.address.join_foreign_volunteer
+													label.sr-only(for="address_district_number") 
+													input#address_district_number.form-control(type="number" placeholder="郵遞區號")
+
+													select.form-control.city
+														option(value="#" disabled selected) 請選擇縣市
+														option(value="#") 台北市
+														option(value="#") 新北市
+														option(value="#") 桃園市
+														option(value="#") 我都行
+													select.form-control.district
+														option(value="#" disabled selected) 鄉鎮市區
+														option(value="#") 中山區
+														option(value="#") 中正區
+														option(value="#") 信義區
+													label.sr-only(for="domestic_address_detail") 國內地址
+													input#domestic_address_detail.form-control(type="text" placeholder="地址")
+										.col-12.col-md-6
+											.form-group
+												label(for="edu") 教育學歷
+												select.form-control
+													option(value="#") 無
+													option(value="#") 國小
+													option(value="#") 國中
+													option(value="#") 高中
+													option(value="#") 大學（專科）
+													option(value="#") 碩士
+													option(value="#") 博士
+										.col-12.col-md-6
+											.form-group
+												label(for="edu") 英文程度
+												.row
+													.col-6.d-flex.justify-content-center.align-items-center
+														label.mb-0.mr-2(for="listen") 聽
+														select.form-control
+															option(value="#") 不懂
+															option(value="#") 略懂
+															option(value="#") 中等
+															option(value="#") 精通
+													.col-6.d-flex.justify-content-center.align-items-center
+														label.mb-0.mr-2(for="listen") 說
+														select.form-control
+															option(value="#") 不懂
+															option(value="#") 略懂
+															option(value="#") 中等
+															option(value="#") 精通
+										.col-12.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+											a.btn.btn-md.btn-secondary.m-1.text-white(href="foreign_volunteer.html") 查詢其他志工行程
+											a.btn.btn-md.page_go_to.m-1.text-white.choose_pane(data-toggle="tab" href="#pane2") 下一步	
+								// 生活狀況內容
+								#pane2.tab-pane.fade.write_info
+									.row
+										.col-12.col-md-6
+											.form-group
+												label.required(for="marital_status") 婚姻狀況
+												.marital_status.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#in_love.form-check-input(type="radio" name="marital_status" value="in_love")
+														label.form-check-label(for="in_love") 穩定交往中
+													.form-check.mr-3
+														input#single.form-check-input(type="radio" name="marital_status" value="single")
+														label.form-check-label(for="single") 單身
+													.form-check
+														input#married.form-check-input(type="radio" name="marital_status" value="married")
+														label.form-check-label(for="married") 已婚
+										.col-12.col-md-6
+											.form-group
+												label.required(for="have_children") 有無子女
+												.have_children.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#not_have_child.form-check-input(type="radio" name="have_children" value="not_have_child")
+														label.form-check-label(for="not_have_child") 無
+													.form-check.mr-3
+														input#have_child.form-check-input(type="radio" name="have_children" value="have_child")
+														label.form-check-label(for="have_child") 有
+										.col-12.col-md-6
+											.form-group
+												label.required(for="eating_habit") 飲食習慣
+												.eating_habit.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#non-vegetarian.form-check-input(type="radio" name="eating_habit" value="non-vegetarian")
+														label.form-check-label(for="non-vegetarian") 葷
+													.form-check.mr-3
+														input#vegetarian.form-check-input(type="radio" name="eating_habit" value="vegetarian")
+														label.form-check-label(for="vegetarian") 素
+										.col-12.col-md-6
+										.col-12.col-md-6
+											.form-group
+												label(for="work") 職業類別
+												select.form-control
+													option(value="#") 農、林、漁、牧業
+													option(value="#") 礦業及土石採取業
+													option(value="#") 製造業
+													option(value="#") 電力及燃氣供應業
+													option(value="#") 用水供應及污染整治業
+													option(value="#") 營造業
+													option(value="#") 批發及零售業
+													option(value="#") 運輸及倉儲業
+													option(value="#") 住宿及餐飲業
+													option(value="#") 資訊及通訊傳播業
+													option(value="#") 金融及保險業
+													option(value="#") 不動產業
+													option(value="#") 專業、科學及技術服務業
+													option(value="#") 支援服務業
+													option(value="#") 公共行政及國防；強制性社會安全
+													option(value="#") 教育服務業
+													option(value="#") 醫療保健及社會工作服務業
+													option(value="#") 藝術、娛樂及休閒服務業
+													option(value="#") 其他服務業
+													option(value="#") 高中生
+													option(value="#") 大專生/大學生
+													option(value="#") 碩士生
+													option(value="#") 博士生
+													option(value="#") 家管
+													option(value="#") 無職業
+													option(value="#") 退休
+													option(value="#") 其他
+										.col-12.col-md-6
+											.form-group
+												label.required(for="work_place") 就讀學校 / 服務單位
+												input.form-control(type="text")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="religion") 婚姻狀況
+												.religion.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#no_religion.form-check-input(type="radio" name="religion" value="no_religion")
+														label.form-check-label(for="no_religion") 無
+													.form-check.mr-3
+														input#christian.form-check-input(type="radio" name="religion" value="christian")
+														label.form-check-label(for="christian") 基督教
+													.form-check.mr-3
+														input#catholicism.form-check-input(type="radio" name="religion" value="catholicism")
+														label.form-check-label(for="catholicism") 天主教
+													.form-check.mr-3
+														input#buddhism.form-check-input(type="radio" name="religion" value="buddhism")
+														label.form-check-label(for="buddhism") 佛教
+													.form-check.mr-3
+														input#taoism.form-check-input(type="radio" name="religion" value="taoism")
+														label.form-check-label(for="taoism") 道教
+													.form-check.mr-3
+														input#islam.form-check-input(type="radio" name="religion" value="islam")
+														label.form-check-label(for="islam") 回教
+													.form-check.mr-3
+														input#other_religion.form-check-input(type="radio" name="religion" value="other_religion")
+														label.form-check-label(for="other_religion") 其他
+													input.form-control.mt-2(type="text" placeholder="請填其他宗教信仰")
+										.col-12.col-md-6
+											.form-group
+												label(for="church") 所屬教會
+												input#church.form-control(type="text" placeholder="如為基督徒，請填寫")
+										.col-12.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+											a.btn.btn-md.page_go_to.m-1.text-white.choose_pane(data-toggle="tab" href="#pane1") 上一步
+											a.btn.btn-md.page_go_to.m-1.text-white.choose_pane(data-toggle="tab" href="#pane3") 下一步	
+
+								// 保險與醫療內容
+								#pane3.tab-pane.fade.write_info
+									.row
+										.col-12.col-md-6
+											.form-group
+												label.required(for="allergy") 藥物過敏
+												.allergy.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#allergy_no.form-check-input(type="radio" name="allergy" value="allergy_no")
+														label.form-check-label(for="allergy_no") 無
+													.form-check.mr-3
+														input#allergy_yes.form-check-input(type="radio" name="allergy" value="allergy_yes")
+														label.form-check-label(for="allergy_yes") 有
+													input.form-control.mt-2(type="text" placeholder="請填寫過敏藥物")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="medical_history") 特殊或重大病史
+												input.form-control(type="text" placeholder="請填寫自身特殊疾病，沒有請寫「無」")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="insurance_beneficiary") 保險受益人
+												input.form-control(type="text" placeholder="請填寫保險受益人之姓名")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="contact_person") 聯絡人姓名
+												input.form-control(type="text")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="emergency_phone_number") 緊急聯絡人電話
+												input.form-control(type="tel")
+										.col-12.col-md-6
+											.form-group
+												label.required(for="emergency_email") 緊急聯絡人電子郵件
+												input.form-control(type="email")
+										.col-12.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+											a.btn.btn-md.page_go_to.m-1.text-white.choose_pane(data-toggle="tab" href="#pane2") 上一步
+											a.btn.btn-md.page_go_to.m-1.text-white.choose_pane(data-toggle="tab" href="#pane4") 下一步
+								// 進階問題內容
+								#pane4.tab-pane.fade.write_info
+									.row
+										.col-12
+											.form-group
+												label.required(for="where_to_know") 請問您是從何處得知舊鞋救命國際志工團的資訊？
+												.where_to_know.d-flex.flex-wrap.mt-2
+													.form-check.mr-3
+														input#place1.form-check-input(type="radio" name="where_to_know" value="place1")
+														label.form-check-label(for="place1") 舊鞋救命官網
+													.form-check.mr-3
+														input#place2.form-check-input(type="radio" name="where_to_know" value="place2")
+														label.form-check-label(for="place2") 舊鞋救命官方Facebook粉絲專頁
+													.form-check.mr-3
+														input#place3.form-check-input(type="radio" name="where_to_know" value="place3")
+														label.form-check-label(for="place3") 在外的演講或分享（企業、機構、學校等）
+													.form-check.mr-3
+														input#place4.form-check-input(type="radio" name="where_to_know" value="place4")
+														label.form-check-label(for="place4") 教會
+													.form-check.mr-3
+														input#place5.form-check-input(type="radio" name="where_to_know" value="place5")
+														label.form-check-label(for="place5") 朋友
+													.form-check.mr-3
+														input#place6.form-check-input(type="radio" name="where_to_know" value="place6")
+														label.form-check-label(for="place6") 其他
+													input.form-control.mt-2(type="text" placeholder="請填寫你是從何處得知舊鞋救命國際志工團的資訊")
+										.col-12
+											.form-group
+												label.required(for="motivate") 請問您報名參加此次『舊鞋救命國際志工團』的想法與動機為何？
+												textarea.form-control(rows="5" placeholder="請輸入您的想法與動機")
+										.col-12
+											.form-group
+												label.required(for="experience") 請問您在學校或工作之餘有無參與志工的經驗？並請簡述服務經驗。
+												textarea.form-control(rows="5" placeholder="請簡述服務經驗")
+										.col-12
+											.form-group
+												label.required(for="experience") 請問您自己對於此次的行程有些甚麼樣的期待及目標？
+												textarea.form-control(rows="5" placeholder="請輸入您的期待及目標")
+										.col-12.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+											a.btn.btn-md.page_go_to.m-1.text-white.choose_pane(data-toggle="tab" href="#pane3") 上一步
+											a.btn.btn-md.page_go_to.m-1.text-white(data-toggle="tab" href="#") 送出
+										
+								
+		section
+			.container.my-5
+				.alert.alert-danger
+					span ***報名年齡為18歲以上至65歲，因長途航程以及當地路況顛簸，還有當地不可抗力之飲食及環境因素，請報名者先行詳細評估個人之身體狀況後再報名喔！***
+					span ***報名後我們將進一步和您聯絡，提供其他事項細節，如：旅遊門診預防針、相關文件申請方式、行前說明訓練會時間、地點等資訊。
+	
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

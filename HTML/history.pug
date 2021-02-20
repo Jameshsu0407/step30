@@ -1,0 +1,76 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 心路歷程
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- timeline
+		link(rel="stylesheet", href="../assets/css/timeline.css")
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/history.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 心路歷程
+		section
+			.container.my-5
+				.text-center
+					h2.my-3(style="color:#0e8b8f;") 回首過去 , 瞻望未來 !
+					h6 舊鞋救命未來的路上想必會更加精彩，也準備迎向更多挑戰，
+					h6 我們需要您持續的禱告與支持，無論眼前所見，讓我們一起秉持信念，
+					h6 堅持為非洲孩子們撒下改變的種子，實踐上帝愛人如己的使命。
+		section
+			.container.my-5
+				.d-flex.justify-content-center.my-5
+					img.img-fluid(src="../assets/img/timeline-start.png", alt="")
+				#timeline
+					.timeline-item(data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+						.timeline-icon
+							i.far.fa-star.fa-fw
+						.timeline-content.left
+							h4 《兩隻筆》
+							img.img-fluid.mt-3(src="../assets/img/history1.png", alt="")
+							p.my-3(style="color:#0e8b8f;") MAR.2020
+							p.my-3 教育是改變非洲的方式之一，而在拜訪各個學校當中，我們也看見了不同的需求。“你有幾隻鉛筆？”小男孩臉上掛著微笑的說：“我有兩隻筆！”轉頭後我才發現，原來班上許多人連一支筆都沒有。
+							p.my-3 “你們沒有筆的話要怎麼寫功課？”孩子們笑著說：“其他同學和老師會借我們，寫完字後我們再還給回去。”
+							p.my-3 他們擁有的或許不多，但是他們卻懂得分享自己手上的一點。我相信教育能改變世界；但不只是書本知識的教育，而是教導我們去愛、去分享的生命教育。
+					.timeline-item(data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+						.timeline-icon
+							i.far.fa-star.fa-fw
+						.timeline-content.right
+							h4 《聖誕回顧》
+							img.img-fluid.mt-3(src="../assets/img/history2.png", alt="")
+							p.my-3(style="color:#0e8b8f;") MAR.2020
+							p.my-3 當時走在肯亞偏鄉的村莊裡，大家細心的為每一位孩子測量尺寸，確保每個人都領到一雙合適的鞋子，只是沒想到回頭一看，孩子們還是光著腳丫走路，而我們也永遠無法忘記牧師所給我們的答覆：「再過幾個禮拜就是聖誕節了，媽媽們先把鞋子收起來，因為她們從沒有想過自己有機會能夠給予孩子們這麼好的禮物！」
+							p.my-3 一轉眼已經走過了幾個年頭，舊鞋救命鞋子發送至更多村莊，也努力建設學校、水井等公共設施，如同往年一般，今年我們能夠給予非洲孩子們最好的禮物，是堅持為他們禱告與努力的祝福！
+					.timeline-item(data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+						.timeline-icon
+							i.far.fa-star.fa-fw
+						.timeline-content.left
+							h4 《一起到非洲傳達愛》
+							img.img-fluid.mt-3(src="../assets/img/history3.jpg", alt="")
+							p.my-3(style="color:#0e8b8f;") DEC.2017
+							p.my-3 截至106年12月31日已有二十九梯志工團（包含宣教團，舊鞋救命團及愛女孩團）前往肯亞及烏干達服事志工團目前受洗人數：2人。
+		section
+			.container.my-5
+				.text-center
+					h2.my-3 Step30
+					h6(style="color:#0e8b8f;") 2014
+					h6 以舊鞋‧救命之名成立
+	
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

@@ -1,0 +1,105 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 執行地圖
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/card_info_top_cover.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 執行地圖
+		// map
+		section
+			#wrapper.d-flex
+				#sidebar-wrapper.bg-light
+					h4.sidebar-head.text-white(style="background-color:#0e8b8f;") Step 30
+					.list-group.list-group-flush
+						p 選擇地點
+						.filter.mb-2
+							.locate
+								i.fas.fa-map-marker-alt.fa-fw.mr-2
+								span 關懷點
+							.number
+								span
+									i 326
+							.switch
+								input#switcher(type="checkbox")
+								label.m-0(for="switcher")
+						.filter.mb-2
+							.locate
+								i.fas.fa-map-marker-alt.fa-fw.mr-2
+								span 沙蚤專案
+							.number
+								span
+									i 6
+							.switch
+								input#switcher1(type="checkbox")
+								label.m-0(for="switcher1")
+						.filter.mb-2
+							.locate
+								i.fas.fa-map-marker-alt.fa-fw.mr-2.color_green
+								span 興學計畫
+							.number
+								span.color_green
+									i 47
+							.switch
+								input#switcher2(type="checkbox")
+								label.m-0(for="switcher2")
+						.filter.mb-2
+							.locate
+								i.fas.fa-map-marker-alt.fa-fw.mr-2.color_blue
+								span 活水計畫
+							.number
+								span.color_blue
+									i 16
+							.switch
+								input#switcher3(type="checkbox")
+								label.m-0(for="switcher3")
+						.filter.mb-2
+							.locate
+								i.fas.fa-map-marker-alt.fa-fw.mr-2.color_bright_green
+								span 養雞農耕計畫
+							.number
+								span.color_bright_green
+									i 49
+							.switch
+								input#switcher4(type="checkbox")
+								label.m-0(for="switcher4")
+						.filter.mb-2
+							.locate
+								i.fas.fa-map-marker-alt.fa-fw.mr-2.color_red
+								span 2020愛女孩計畫
+							.number
+								span.color_red
+									i 270
+							.switch
+								input#switcher5(type="checkbox")
+								label.m-0(for="switcher5")
+						hr(style="width: 100%")
+						p 地圖類型
+						img.img-fluid(src="../assets/img/roadmap.png", alt="" style="cursor: pointer;")
+						.d-sm-none.my-2.d-flex.justify-content-center
+							button.menu-toggle.btn.text-white(style="background-color: #0e8b8f") 查詢
+				#page-content-wrapper
+					i.menu-toggle.fas.fa-bars.fa-fw
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3333.967410377096!2d-111.89998968453055!3d33.31966746342457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDE5JzEwLjgiTiAxMTHCsDUzJzUyLjEiVw!5e0!3m2!1sen!2sus!4v1516690469899" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug
+		

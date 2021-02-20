@@ -1,0 +1,178 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 分項計畫
+		//- 匯入css
+		include head.pug
+		// 舊鞋救命
+		link(rel="stylesheet", href="../assets/css/color_brown.min.css")
+		// 活水計畫
+		// link(rel="stylesheet", href="../assets/css/color_blue.min.css")
+		// 興學計畫
+		// link(rel="stylesheet", href="../assets/css/color_green.min.css")
+		// 養雞農耕
+		// link(rel="stylesheet", href="../assets/css/color_bright_green.min.css")
+		// 國際志工
+		// link(rel="stylesheet", href="../assets/css/color_red.min.css")
+		// Move宣教
+		// link(rel="stylesheet", href="../assets/css/color_dark_red.min.css")
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+		// banner
+		section
+			.jumbotron.top_cover.mb-0(style="background-image: url(../assets/img/banner.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container(style="overflow-x: hidden; clear:both;")
+					
+					h1(data-aos="fade-left" data-aos-duration="2000" data-aos-once="true")  願。井
+					h2(data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true")
+						| 陪孩子走一段取水之路
+		// video card phone
+		section
+			.video_card.d-lg-none.mx-auto
+				.left
+					.embed-responsive.embed-responsive-16by9
+						iframe.embed-responsive-item(src="https://www.youtube.com/embed/82ZGZtqXI4g" allowfullscreen="")
+				.right
+					h4 問題：缺乏乾淨水源
+					ul
+						li 居民易感染水污染相關疾病
+						li 取水費時且路途遙遠
+					h4 幫助：建造水井
+					ul
+						li 建造水井提供安全飲用水
+						li 節省孩子取水時間用於教育
+						li 以水井為中心凝聚社群意識
+		// video card pc, bg_parallax
+		section
+			.bg_parallax
+				.content
+					// video card pc
+					.video_card.d-none.d-lg-block.mx-auto(data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300" data-aos-once="true")
+						.row
+							.left.col-lg-7
+								.embed-responsive.embed-responsive-16by9
+									iframe.embed-responsive-item(src="https://www.youtube.com/embed/82ZGZtqXI4g" allowfullscreen="")
+							.right.col-lg-5
+								h4 問題：缺乏乾淨水源
+								ul
+									li 居民易感染水污染相關疾病
+									li 取水費時且路途遙遠
+								h4 幫助：建造水井
+								ul
+									li 建造水井提供安全飲用水
+									li 節省孩子取水時間用於教育
+									li 以水井為中心凝聚社群意識
+					// slogan
+					.text
+						img.img-fluid.mb-3(src="../assets/img/logo-5.png", alt="" style="max-width: 150px;")
+						h3(data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true") 撒哈拉以南非洲，僅有約24％人口享有安全飲水。
+						h3(data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true")
+							| 一口水井，足以澆灌無數生命。
+				.parallax(style="background-image: url(../assets/img/bg-1.jpg);")
+		// news
+		section
+			.container
+				.row
+					.title_section.text-center.mt-5.mb-5.col-12
+						img(src="../assets/img/ttl-bar.png" alt="")
+						h3 最新消息
+					#cards.cards
+						- for ( var i=1 ; i<=6 ; i++)
+							.card.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								a(href="card_info.html")
+									img.card-img-top(src="../assets/img/card2.png" alt="Card image cap")
+									.card-body
+										.date
+											span.d-block.day 28
+											span.d-block SEP
+											span.d-block 2020
+										h6.card-title.text-truncate 他不是我弟弟
+										nav
+											ol.breadcrumb.p-0
+												li
+													i.fas.fa-bullhorn.fa-fw.mr-2
+												li.breadcrumb-item 計畫
+												li.breadcrumb-item 活水計畫
+										p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+										.more.mt-3
+											.text-secondary
+												i.fas.fa-plus.fa-fw.mr-2
+												| 了解詳情
+					.look_more.mt-3.mb-5
+						a(href="breaking_news.html") 查看更多
+		// bg_parallax_2
+		section
+			.bg_parallax_2
+				.content(style="position:relative;")
+					.text
+						h5 水井，帶來潔淨水源
+						h2 澆灌生命
+						hr(style="border-top: 3px solid white;")
+						.d-flex.flex-wrap.align-items-center
+							.col-12.col-md-4
+								img.img-fluid(src="../assets/img/logo-3.png", alt="")
+							.col-12.col-md-8.my-3
+								h3.text-white 至2019年底已完成16處水井
+				.parallax(style="background-image: url(../assets/img/bg-2.jpg);")
+		// plans story
+		section
+			.container
+				.row
+					.title_section.text-center.mt-5.mb-5.col-12
+						img(src="../assets/img/ttl-bar.png" alt="")
+						h3 計畫故事
+					.cards
+						- for ( var i=1 ; i<=6 ; i++)
+							.card.p-0(data-aos="fade-up" data-aos-duration="1000" data-aos-once="true")
+								a(href="card_info.html")
+									img.card-img-top(src="../assets/img/card2.png" alt="Card image cap")
+									.card-body
+										.date
+											span.d-block.day 28
+											span.d-block SEP
+											span.d-block 2020
+										h6.card-title.text-truncate 他不是我弟弟
+										nav
+											ol.breadcrumb.p-0
+												li
+													i.fas.fa-bullhorn.fa-fw.mr-2
+												li.breadcrumb-item 計畫
+												li.breadcrumb-item 活水計畫
+										p.card-text 瑪麗亞(化名)15歲，手中牽著1歲大的男孩，不是弟弟，是瑪麗亞的大兒子。
+										.more.mt-3
+											.text-secondary
+												i.fas.fa-plus.fa-fw.mr-2
+												| 了解詳情
+					.look_more.mt-3.mb-5
+						a(href="#") 查看更多
+		// album
+		section
+			.container
+				.row
+					.title_section.text-center.mt-5.mb-5.col-12
+						img(src="../assets/img/ttl-bar.png" alt="")
+						h3 專案相簿
+					.photos.mb-5
+						- for ( var i=1 ; i<=3 ; i++)
+							a(data-fslightbox="gallery" href="../assets/img/card1.png" title="水井：不只提供淨水，更滋養良田" data-aos="fade-up" data-aos-duration="800" data-aos-once="true")
+								img.img-fluid(src="../assets/img/card1.png" alt="")
+								.caption 水井：不只提供淨水，更滋養良田
+							a(data-fslightbox="gallery" href="../assets/img/card2.png" title="他不是我弟弟" data-aos="fade-up" data-aos-duration="800" data-aos-once="true")
+								img.img-fluid(src="../assets/img/card2.png" alt="")
+								.caption 他不是我弟弟
+							a(data-fslightbox="gallery" href="../assets/img/card3.png" title="Mbale 水井落成" data-aos="fade-up" data-aos-duration="800" data-aos-once="true")
+								img.img-fluid(src="../assets/img/card3.png" alt="")
+								.caption Mbale 水井落成
+		//- 匯入footer
+		include footer.pug
+		//- 匯入手機底部導覽列
+		include phone_bottom_navbar.pug
+		//- 匯入script
+		include script.pug

@@ -1,0 +1,107 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 執行團隊
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/team.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 執行團隊
+		section
+			.container.my-5
+				.row(style="overflow-x: hidden; clear:both;")
+					.d-flex.justify-content-center.align-items-center.col-12.col-md-4.p-3(data-aos="fade-right" data-aos-duration="1200" data-aos-once="true")
+						img.img-fluid(src="../assets/img/a_director.jpg", alt="")
+					.d-flex.flex-column.justify-content-center.col-12.col-md-8.p-3(data-aos="fade-left" data-aos-duration="1200" data-aos-once="true")
+						h5(style="color:#0e8b8f;") 理事長 & 發起人
+						h3(style="color:#0e8b8f;") 楊右任
+						hr(style="width:100%;")
+						p 基督教會同工、翻譯、講師、青年團契輔導。
+						p 致力於宣揚基督信仰，以實際行動影響社會族群。2014年發起“舊鞋救命”活動關懷東非赤貧地區，串聯台灣、香港、加拿大、美國、烏干達、肯亞等各國慈善組織，提供青年學子走入世界，身心靈成長的教育機會。
+						hr(style="width:100%;")
+		section
+			.container.my-5
+				ul.team.nav.nav-tabs.nav-pills.nav-fill.mb-3
+					li.nav-item
+						a#asia_tab.nav-link.active(data-toggle="tab" href="#asia_pane")  Asia Taiwan _ 亞洲 台灣
+					li.nav-item
+						a#africa_tab.nav-link(data-toggle="tab" href="#africa_pane") East Africa Republic of Kenya_東非
+					li.nav-item
+						a#other_tab.nav-link(data-toggle="tab" href="#other_pane") 其他合作團隊
+				.team.tab-content
+					#asia_pane.tab-pane.fade.show.active
+						.row.justify-content-center(style="overflow: hidden; clear:both;")
+							.text-center.mt-3.col-12
+								img(src="../assets/img/ttl-bar.png" alt="")
+								h4 執行團隊
+							- for(i=1;i<=7;i++)
+								.profile.d-flex.flex-column.justify-content-center.align-items-center.col-12.col-sm-6.col-md-4.col-lg-3.p-3.text-center(data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+									img.img-fluid.rounded-circle.mb-3(src="../assets/img/team1.png", alt="")
+									p 共同發起人
+									h4 雷可樂 KARA
+							.text-center.mt-3.col-12
+								img(src="../assets/img/ttl-bar.png" alt="")
+								h4 執行團隊
+							- for(j=1;j<=6;j++)
+								.profile.d-flex.flex-column.justify-content-center.align-items-center.col-12.col-sm-6.col-md-4.col-lg-3.p-3.text-center(data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+									img.img-fluid.rounded-circle.mb-3(src="../assets/img/team1.png", alt="")
+									p 共同發起人
+									h4 雷可樂 KARA
+					#africa_pane.tab-pane.fade
+						.row.justify-content-center
+							.text-center.mt-3.col-12
+								img(src="../assets/img/ttl-bar.png" alt="")
+								h4 Management team
+							- for(i=1;i<=7;i++)
+								.profile.d-flex.flex-column.justify-content-center.align-items-center.col-12.col-sm-6.col-md-4.col-lg-3.p-3.text-center(data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+									img.img-fluid.rounded-circle.mb-3(src="../assets/img/team2.png", alt="")
+									p Director / Pastor
+									h4 DAWSON MUDENYO MUDENYO
+							.text-center.mt-3.col-12
+								img(src="../assets/img/ttl-bar.png" alt="")
+								h4 Management team
+							- for(j=1;j<=6;j++)
+								.profile.d-flex.flex-column.justify-content-center.align-items-center.col-12.col-sm-6.col-md-4.col-lg-3.p-3.text-center(data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+									img.img-fluid.rounded-circle.mb-3(src="../assets/img/team2.png", alt="")
+									p Director / Pastor
+									h4 DAWSON MUDENYO MUDENYO
+					#other_pane.tab-pane.fade
+						.row.justify-content-center
+							.text-center.mt-3.col-12
+								img(src="../assets/img/ttl-bar.png" alt="")
+								h4 Management team
+							- for(i=1;i<=7;i++)
+								.profile.d-flex.flex-column.justify-content-center.align-items-center.col-12.col-sm-6.col-md-4.col-lg-3.p-3.text-center(data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+									img.img-fluid.rounded-circle.mb-3(src="../assets/img/team2.png", alt="")
+									p Director / Pastor
+									h4 DAWSON MUDENYO MUDENYO
+							.text-center.mt-3.col-12
+								img(src="../assets/img/ttl-bar.png" alt="")
+								h4 Management team
+							- for(j=1;j<=6;j++)
+								.profile.d-flex.flex-column.justify-content-center.align-items-center.col-12.col-sm-6.col-md-4.col-lg-3.p-3.text-center(data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+									img.img-fluid.rounded-circle.mb-3(src="../assets/img/team2.png", alt="")
+									p Director / Pastor
+									h4 DAWSON MUDENYO MUDENYO
+
+
+
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug

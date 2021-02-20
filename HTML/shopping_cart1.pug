@@ -1,0 +1,79 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 購物車：1捐款明細
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入navbar
+		include navbar.pug
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/card_info_top_cover.png);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 購物車
+		// progress_bar
+		section
+			.container
+				.progress_bar.my-5
+					ul
+						li.active
+							.wrap
+							h5 1 捐款明細
+						li
+							.wrap
+							h5 2 填寫捐款人資料
+						li
+							.wrap
+							h5 3 選擇/確認捐款方式
+						li
+							.wrap
+							h5 4 交易完成
+
+		// list
+		section
+			.container
+				form
+					label.form_title
+						i.fas.fa-heart
+						| 捐款明細
+					table.table.table-striped
+						thead
+							tr.text-center
+								th.text-left(scope="col" style="width: 20%") 募資專案
+								th.text-left(scope="col" style="width: 35%") 募資項目
+								th.text-center(scope="col" style="width: 15%") 捐款方式
+								th.text-center(scope="col" style="width: 15%") 捐款金額
+								th.text-center(scope="col" style="width: 8%") 取消
+						tbody
+							- for ( var i=1 ; i<=4 ; i++)
+								tr.text-center
+									td.text-left(data-th="募資專案") 2020活水計畫
+									td.text-left(data-th="募資項目") NaN								
+									td(data-th="捐款方式")
+										.wrap.p-2
+											select.form-control
+												option(value="單次捐款") 單次捐款
+												option(value="定期定額") 定期定額
+									td(data-th="捐款金額")
+										.wrap.p-2
+											input.form-control(type="number" min="500" step="100" placeholder="1000")
+									td(data-th="取消")
+										a.cancel(href="#")
+											i.far.fa-times-circle.fa-fw.text-danger
+					.sum_cost.p-2.mb-5
+						h6.text-right.text-white.m-0 總金額：6000元
+					.page_link.d-flex.flex-wrap.justify-content-center.align-items-center
+						a.btn.btn-md.page_go_to.m-1.text-white(href="shopping_cart2.html") 
+							| 下一步
+							i.fas.fa-angle-double-right.fa-fw.ml-1
+		//- 匯入footer
+		include footer.pug
+		//- 匯入script
+		include script.pug
+		

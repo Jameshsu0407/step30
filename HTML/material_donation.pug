@@ -1,0 +1,142 @@
+doctype html
+html(lang="zh-tw")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title 物資捐贈說明
+		//- 匯入css
+		include head.pug
+	body#top
+		//- 匯入go_to_top
+		include go_to_top.pug
+		//- 匯入立即捐款
+		include donate_now.pug
+		//- 匯入navbar
+		include navbar.pug
+
+		// intro_top_cover
+		section
+			.jumbotron.intro_top_cover.mb-0(style="background-image: url(../assets/img/story.jpg);" data-aos="fade-up" data-aos-duration="1200" data-aos-once="true")
+				.container
+					.text
+						h1 物資捐贈說明
+		section
+			.container.my-5(style="overflow: hidden; clear:both;")
+				.row
+					.col-12.col-lg-6.order-2.order-lg-1
+						h2.text-info.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ►【舊鞋救命捐贈物資說明】
+						h6(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 【方法一】 親自送至伯利恆倉庫
+						p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 地址：新北市泰山區新北大道6段79巷57弄8-2號（伯利恆倉庫
+							br
+							| 親送時段：星期一〜星期六 10：00~18：00（週日休息）
+						h6(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 【方法二】 指定募集期間寄送 
+						p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+							strong 為了讓倉庫工作人員可以加快速度整理，請勿於非募集期寄送包裹，謝謝您的體諒
+							br
+							| 寄送地址：新北市泰山區新北大道6段79巷57弄8-2號（伯利恆倉庫）
+							br
+							| 掌握每次募集時間，請加入
+							a.text-success(href="https://line.me/R/ti/p/%40fhk8334z" target="_blank") @LINE
+							br
+							| 或撥打電話：
+							a(href="tel:02-7741-5519") 02-7741-5519
+							br
+							| 可使用郵局、嘉里大榮物流、新竹物流、黑貓宅急便，以及各大貨運物流皆可寄送。
+							br
+							strong.text-danger 特別感謝：萬海航運捐贈貨櫃
+					.col-12.col-lg-6.d-flex.order-1.order-lg-2.justify-content-center.align-items-center.mb-3
+						img.img-fluid(data-aos="fade-left" data-aos-duration="1500" data-aos-once="true" src="../assets/img/material.JPG", alt="")
+		section
+			.container.my-5(style="overflow: hidden; clear:both;")
+				h2.text-info.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ►【注意事項】
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+					|【童鞋】：十二歲以下童鞋最迫切需要。
+					br
+					|【舊鞋】：需品質堪用之男鞋﹑女鞋(平底包鞋為主)，無破洞、磨損、裂痕、脫皮、氧化等狀況。
+					br
+					|【舊衣】：以夏季衣物為主（衣服褲子大人小孩皆可 ; 
+					strong 內衣褲，襪子不收
+					| ）
+					br
+					|【書包】：畢業書包，以及其他可放入A4尺寸之各式包（
+					strong 環保袋、不織布、硬殼包、拉桿包不收
+					| ）。
+		section
+			.container.my-5(style="overflow: hidden; clear:both;")
+				h2.text-info.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ►【所需物資】
+				h3.text-success.my-3(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 一、舊鞋：
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 舊鞋不限尺寸、年齡，需品質堪用之男鞋﹑女鞋（平底包鞋為主），無破洞、磨損、裂痕、脫皮、氧化等狀況。
+				ol(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+					li 請於清潔後用鞋帶、繩子綑綁，使雙腳不分離。
+					li 切勿使用塑膠袋與鞋盒包裝，一個紙箱內可放多雙鞋子，不要過多的包裝，例如：
+						strong 不需要
+						| 一雙鞋一個塑膠袋、一雙鞋一個鞋盒。
+				img.img-fluid(src="../assets/img/material1.jpg", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+				h3.text-success.my-3(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 二、舊包：
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 畢業書包，以及其他可放入A4尺寸之各式包，過小的不適合。
+					br
+					strong.text-danger *環保袋、不織布、硬殼包、拉桿包不收
+				img.img-fluid(src="../assets/img/material2.gif", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+
+				h3.text-success.my-3(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 三、舊衣：
+				ol(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+					li 以夏季衣物、褲子為主，大人、小孩皆可。
+					li 無標註個資之學校制服可捐。
+					li 衣物請清潔、檢查、整理過後再捐出。
+					li 內衣褲、襪子不收。
+					li 大片泛黃、污漬或破損，請勿捐贈。
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+					strong.text-danger *因文化的不同，非洲國家的女生，不適合穿過於曝露或過短的裙子、褲子。
+				img.img-fluid(src="../assets/img/material3.gif", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+				img.img-fluid(src="../assets/img/material4.gif", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+
+		section
+			.container.my-5(style="overflow: hidden; clear:both;")
+				h2.text-info.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ►【非所需物資】
+				h3.text-success(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 一、鞋子：
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 不耐穿的款式、拖鞋、高跟鞋、厚底鞋、長靴、雪靴、涼鞋、布希鞋、塑膠鞋、運動拖鞋、短雨鞋。
+					br
+					| 鞋子發徽、破爛、掉底、開口、鞋面氧化、鞋底斷裂等。
+					br
+					strong.text-danger *以上款示因氣候、環境與耐用性不適合，請勿捐贈。
+				img.img-fluid(src="../assets/img/material5.gif", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+
+				h3.text-success(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 二、包包：
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 不能裝A4尺寸之包包、零錢包、塑膠材質、硬殼材質、不織布購物袋、紙袋、塑膠袋、拉桿式書包、行李箱。
+					br
+					strong.text-danger *以上款示皆因環境、氣候、實用性、以及貨櫃運送硬殼物資容易碎裂，請勿捐贈。
+				img.img-fluid(src="../assets/img/material6.gif", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+
+				h3.text-success(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" data-aos-delay="500") 二、衣物：
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") 過度暴露、過短、內衣褲、泳衣、過於保暖的冬衣、帽子、配件。
+					br
+					strong.text-danger *以上款示皆因環境、氣候、實用性、以及貨櫃運送硬殼物資容易碎裂，請勿捐贈。
+				img.img-fluid(src="../assets/img/material7.gif", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+				img.img-fluid(src="../assets/img/material8.jpg", alt="" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true")
+		section
+			.container.my-5(style="overflow: hidden; clear:both;")
+				h2.text-info.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ►【物資捐贈聲明】
+				h6(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" style="line-height:1.5") 舊鞋救命基督國際關懷協會，所有募集的物資將先經過志工整理打包，除去不適用非洲之捐贈物品轉送台灣內部慈善組織外，所有資源將優先運送至第三世界國家，並逐步以社會企業方式，改善基本生活現況，以基督的愛關懷非洲赤貧地區，並以宣教、教育、飲水、衛教方式，逐步建立和諧分享的自立社區為目的。 
+				h6(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true" style="line-height:1.5") 舊鞋救命協會保有權力決定物資發送時間地點，並尊重當地使用物資的意願與方式。或在特殊狀況下將物資轉換為醫療設備、運費或家畜等其他資源進一步協助當地居民，以改善赤貧地區居民基本生活為目的。
+		section
+			.container.my-5(style="overflow-x: hidden; clear:both;")
+				h2.text-info.mb-4(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true") ►【其他支持方式】
+				p(data-aos="fade-right" data-aos-duration="1500" data-aos-once="true")
+					a(href="fundraising.html")
+						i.fas.fa-heart.fa-fw.mr-2
+						| 捐款支持
+					br
+					a(href="https://docs.google.com/forms/d/e/1FAIpQLSenNXQkEQGZM2oLZaIB3prhHhScZyO2_q6cHnARlG85QofI9A/viewform" target="_blank")
+						i.fas.fa-heart.fa-fw.mr-2
+						| 捐款收據連結
+					br
+					a(href="joinus.html")
+						i.fas.fa-heart.fa-fw.mr-2
+						| 成為志工
+		
+	//- 匯入footer
+	include footer.pug
+	//- 匯入手機底部導覽列
+	include phone_bottom_navbar.pug
+	//- 匯入script
+	include script.pug
