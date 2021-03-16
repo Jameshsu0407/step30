@@ -30,6 +30,10 @@ footer .overlay .vice_nav .vice_nav_list .list li a:hover {
   color: #028DCB !important;
 }
 
+.card:hover .more .text-secondary {
+  color: #028DCB !important;
+}
+
 .card .card-title {
   font-size: 1.2rem;
 }
