@@ -72,32 +72,33 @@ body
 // ====================================================================================================
 // 共用部分
 // ====================================================================================================
-// 回到上方
+// 回到上方、對話框
+div[id^="gb-widget"]
+    bottom: 170px !important
+    @media screen and ( max-width: 768px )
+        right: 10px !important
 #go_to_top
     position: fixed
-    bottom: 88px
-    @media screen and ( max-width: 992px )
-        bottom: 139px
-    @media screen and ( max-width: 768px )
-        bottom: 205px
-    @media screen and ( max-width: 400px )
-        bottom: 227px
-    @media screen and ( max-width: 362px ) 
-        bottom: 251px
-    @media screen and ( max-width: 302px ) 
-        bottom: 275px
-    right: 0px
+    bottom: 90px
+    right: 23px
     width: 50px
     height: 50px
+    border-radius: 50%
     background-color: $primary_color
-    color: #000
     display: flex
     justify-content: center
     align-items: center
     text-decoration: none
-    z-index: 999
+    z-index: 16000160
+    box-shadow: rgba(0,0,0,0.4) 2px 2px 6px
+    transition: 0.5s
+    &:hover
+        box-shadow: rgba(0,0,0,0.7) 2px 2px 11px
+    @media screen and ( max-width: 768px )
+        right: 10px !important
     i
-        font-size: 40px
+        font-size: 30px
+        color: white
 // 立即捐款
 .donate_now
     position: fixed

@@ -17,6 +17,7 @@ $(document).ready(function () {
 	index_menu_switch();
 	// 圖片resize
 	// pic_resize();
+	tt_btn();
 });
 // resize
 $(window).resize(function () {
@@ -56,6 +57,21 @@ $('a#go_to_top[href*="#"]')
 // ====================================================================================================
 // function
 // ====================================================================================================
+function tt_btn() {
+	var options = {
+		facebook: '1522373268006518', // Facebook page ID
+		line: '//line.me/R/ti/p/@fhk8334z', // Line QR code URL
+		call_to_action: '您好，有任何問題，歡迎與我們聯繫', // Call to action
+		button_color: '#0d8b8f', // Color of button
+		position: 'right', // Position may be 'right' or 'left'
+		order: 'facebook,line', // Order of buttons
+	 };
+	 var proto = document.location.protocol, host='getbutton.io', url=proto + '//static.' + host;
+	 var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+	 s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+	 var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+}
+
 // selector_nav
 function selector_nav() {
 	// 顯示ALL
